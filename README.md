@@ -46,7 +46,7 @@ Each biome is a self-contained lagoon with its own creatures, background, music,
    - Creatures: Moonfish, Octopus, Rust Crabs
    - Decor: Ship debris, Rusty chests, Broken statues
 
-### 🏝 Decorations
+###  Decorations
 - Up to 3 purchasable decor items per biome.
 - Adds ambiance and life to the lagoon.
 
@@ -73,7 +73,7 @@ Each biome is a self-contained lagoon with its own creatures, background, music,
 
 ---
 
-## 🧪Technical Overview (Unity)
+## Technical Overview (Unity)
 
 - **Engine**: Unity 2D
 - **Art Style**: Pixel Art
