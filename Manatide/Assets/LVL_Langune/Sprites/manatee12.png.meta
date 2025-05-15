@@ -55,7 +55,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -92,7 +92,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -284,7 +284,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      manatee12_0: 3298308381740601934
+      manatee12_1: 4494929587363580468
+      manatee12_2: 4028139872416481058
+      manatee12_3: -303062869327048003
+      manatee12_4: -5170732675791595387
+      manatee12_5: -721741643436255878
+      manatee12_6: -3381335874855160805
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

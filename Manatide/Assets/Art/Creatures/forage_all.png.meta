@@ -106,7 +106,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -143,7 +143,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -709,7 +709,31 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      forage_all_0: 4174213570660203000
+      forage_all_1: 220885278294964333
+      forage_all_10: 1250668533672382220
+      forage_all_11: 5597815416295681919
+      forage_all_12: -3144212577877746560
+      forage_all_13: 3255648846544840918
+      forage_all_14: -56915361953719346
+      forage_all_15: -1788009195178510930
+      forage_all_16: -5354630416379702022
+      forage_all_17: -4318503021701737888
+      forage_all_18: -4271678993193358644
+      forage_all_19: 7485185272909682875
+      forage_all_2: 221821244307184520
+      forage_all_20: -2644773084938011102
+      forage_all_21: 4214982506491858878
+      forage_all_22: 2909962166523053777
+      forage_all_23: 8018009241423808510
+      forage_all_3: 8659499352799927786
+      forage_all_4: -5497978806055660540
+      forage_all_5: 2778634518537406603
+      forage_all_6: 5126064700437671597
+      forage_all_7: 6518155994580755089
+      forage_all_8: -8734039173765444640
+      forage_all_9: 680325179247445739
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

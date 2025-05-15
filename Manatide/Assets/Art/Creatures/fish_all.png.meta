@@ -280,7 +280,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -317,7 +317,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -2159,7 +2159,89 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fish_all_0: 7562099168462063763
+      fish_all_1: -3247536355631726963
+      fish_all_10: -2636024645474905404
+      fish_all_11: 390022389860725351
+      fish_all_12: -6336768404320931917
+      fish_all_13: -8651663059471405278
+      fish_all_14: 542896020474613652
+      fish_all_15: -8660175979550507467
+      fish_all_16: -5419130620502406259
+      fish_all_17: 7465613150301823779
+      fish_all_18: -8938895872548984470
+      fish_all_19: 7313649440181242364
+      fish_all_2: 8650925642462580171
+      fish_all_20: -45871876207743641
+      fish_all_21: -4035862552032688997
+      fish_all_22: -389871281700988573
+      fish_all_23: 8260401150342789986
+      fish_all_24: -430211408895539287
+      fish_all_25: -605530774813919692
+      fish_all_26: 8697150938615657931
+      fish_all_27: -5213648886773076651
+      fish_all_28: 1109608026293459612
+      fish_all_29: -2914052149060173423
+      fish_all_3: 29989854262553476
+      fish_all_30: -3184042199353221207
+      fish_all_31: -2325462230245003194
+      fish_all_32: 1271885414865159085
+      fish_all_33: -6875217076110019212
+      fish_all_34: -7664026004450657490
+      fish_all_35: 9206770152398273715
+      fish_all_36: -2647047015630788110
+      fish_all_37: 2511610153559947890
+      fish_all_38: 7796561020505543030
+      fish_all_39: -6381518749145344352
+      fish_all_4: 6916081648760587282
+      fish_all_40: -5031410500916967526
+      fish_all_41: -5131568937346701242
+      fish_all_42: 5475172644260695399
+      fish_all_43: -7698716527301216927
+      fish_all_44: 3766033596009617927
+      fish_all_45: -4751912318790581375
+      fish_all_46: 4737213271802860664
+      fish_all_47: 7547396426999694190
+      fish_all_48: 6432504301662954127
+      fish_all_49: -5688346597922364057
+      fish_all_5: 2492934237400561006
+      fish_all_50: 2171256593745323911
+      fish_all_51: 123178827597324926
+      fish_all_52: 730326468133646943
+      fish_all_53: -7303351409001588918
+      fish_all_54: 2728792106062309286
+      fish_all_55: 314587002332026952
+      fish_all_56: 2270076149010827429
+      fish_all_57: 5151656865704747667
+      fish_all_58: 6111905712997990291
+      fish_all_59: 859539822500210675
+      fish_all_6: 7347826169834475334
+      fish_all_60: 5801821483980623485
+      fish_all_61: -4819932235455849574
+      fish_all_62: -8564722737017076801
+      fish_all_63: -230747589401853230
+      fish_all_64: 7013411655321412638
+      fish_all_65: 6248611399484834027
+      fish_all_66: -7064371246204362526
+      fish_all_67: -4321711341102629056
+      fish_all_68: 3613757786289513111
+      fish_all_69: -5571891285493494142
+      fish_all_7: -3137438670390846309
+      fish_all_70: -8669068668088916585
+      fish_all_71: -8140896907200390796
+      fish_all_72: 7390339962541838183
+      fish_all_73: 1074741582519398770
+      fish_all_74: -7320384216036338592
+      fish_all_75: 6450330276506186610
+      fish_all_76: -6619931667958756590
+      fish_all_77: 1433537254135190444
+      fish_all_78: -3195712420905077175
+      fish_all_79: -4696345860163214336
+      fish_all_8: -6683491001197974229
+      fish_all_80: -5785056965407666591
+      fish_all_81: 5405400430933927876
+      fish_all_9: 4754037819434194467
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
