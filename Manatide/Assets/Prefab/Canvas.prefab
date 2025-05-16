@@ -2142,7 +2142,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -98, y: 423}
+  m_AnchoredPosition: {x: -98, y: 366}
   m_SizeDelta: {x: 256.4556, y: 84.7419}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8453271653865542417
@@ -3204,8 +3204,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.10287501, y: 0.15}
   m_AnchorMax: {x: 0.8977085, y: 0.900111}
-  m_AnchoredPosition: {x: -4.6414185, y: -33.561005}
-  m_SizeDelta: {x: 259.76, y: 152.88}
+  m_AnchoredPosition: {x: -4.6414185, y: -95.43967}
+  m_SizeDelta: {x: 259.76, y: 29.1227}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8508820153982313821
 CanvasRenderer:
@@ -3567,9 +3567,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f94a7aae8127c14e8ec881f13490000, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerState: {fileID: 11400000, guid: 1539bc16371822340868bc95d668a50e, type: 2}
-  coinText: {fileID: 2126020167779192935}
-  foodText: {fileID: 1767806819567023259}
   overlayShop: {fileID: 7775409260120570373}
   overlayBiomes: {fileID: 1541064015620228571}
   overlayManateeInfo: {fileID: 6932137049543088223}
@@ -5160,7 +5157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.000030518}
+  m_AnchoredPosition: {x: 0, y: -0.000030517578}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8011224014472906011
@@ -5486,6 +5483,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e717e97d6c33614e97bede9cee86e70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerState: {fileID: 11400000, guid: 1539bc16371822340868bc95d668a50e, type: 2}
+  coinsText: {fileID: 2126020167779192935}
+  btnKelpShop: {fileID: 5492355153890589440}
+  PriceBKelp: 5000
+  KelpText: {fileID: 1696920889765630833}
+  btnKelpBiome: {fileID: 7382926128314869423}
+  btnEpave: {fileID: 5882650276523364335}
+  PriceBEpave: 10000
+  EpaveText: {fileID: 4512952390895273684}
+  btnEpaveBiome: {fileID: 8084694010279755595}
   btnManatee1: {fileID: 5135406048494554576}
   PriceM1: 100
   prefabManateeType1: {fileID: 6991527556628755838, guid: da96d50903b33fc40b07844e4ab7fd79, type: 3}
@@ -5513,6 +5520,17 @@ MonoBehaviour:
   btnDecoration3: {fileID: 0}
   PriceD3: 300
   prefabDecorationType3: {fileID: 0}
+  btFood: {fileID: 0}
+  PriceFood: 0
+  MaxLimit: 0
+  btnPack1: {fileID: 0}
+  PrincePack1: 0
+  btnPack2: {fileID: 0}
+  PrincePack2: 0
+  btnPack3: {fileID: 0}
+  PrincePack3: 0
+  btnPack4: {fileID: 0}
+  PrincePack4: 0
 --- !u!1 &3473767505094814595
 GameObject:
   m_ObjectHideFlags: 0
@@ -6027,142 +6045,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1 &3903221496827155196
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8842882383913538869}
-  - component: {fileID: 6757349048503144094}
-  - component: {fileID: 6957140076985961299}
-  m_Layer: 5
-  m_Name: Coins
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &8842882383913538869
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3903221496827155196}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4516988530011440557}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 512, y: 482}
-  m_SizeDelta: {x: 200, y: 64.5848}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &6757349048503144094
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3903221496827155196}
-  m_CullTransparentMesh: 1
---- !u!114 &6957140076985961299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3903221496827155196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: 'Money : '
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c150b98d70acf7e4eb0ae9f44eeb7c93, type: 2}
-  m_sharedMaterial: {fileID: -2717766744735201409, guid: c150b98d70acf7e4eb0ae9f44eeb7c93, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 75
-  m_fontSizeBase: 75
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: -104.252075, y: 0, z: 36.314453, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &3974611297564619078
 GameObject:
   m_ObjectHideFlags: 0
@@ -6475,7 +6357,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 527, y: -0.000030518}
+  m_AnchoredPosition: {x: 527, y: -0.000030517578}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4003040728555862432
@@ -6559,7 +6441,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8914324491286778209}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5837780782104802077}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: BuyBiomeEpave
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4260188560495527499
 GameObject:
   m_ObjectHideFlags: 0
@@ -6594,7 +6488,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -98, y: 423}
+  m_AnchoredPosition: {x: -93, y: 366}
   m_SizeDelta: {x: 256.4556, y: 84.7419}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3172011680141214340
@@ -7126,7 +7020,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -812, y: 415.37}
+  m_AnchoredPosition: {x: -815, y: 358.37}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3905665162163083612
@@ -7395,8 +7289,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 423}
-  m_SizeDelta: {x: 256.4556, y: 84.7419}
+  m_AnchoredPosition: {x: 0, y: 356}
+  m_SizeDelta: {x: 256.4556, y: 84.741}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7649753167172197564
 CanvasRenderer:
@@ -7655,7 +7549,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -812, y: 415.37}
+  m_AnchoredPosition: {x: -812, y: 348.37}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4800447464683585575
@@ -7742,7 +7636,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2231461725370345879}
         m_TargetAssemblyTypeName: GameUIManager, Assembly-CSharp
-        m_MethodName: ReturnToShop
+        m_MethodName: HideMainUI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7791,8 +7685,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.10287501, y: 0.15}
   m_AnchorMax: {x: 0.8977085, y: 0.900111}
-  m_AnchoredPosition: {x: -4.6414185, y: -33.561005}
-  m_SizeDelta: {x: 259.76, y: 152.88}
+  m_AnchoredPosition: {x: -4.6414185, y: -86.41568}
+  m_SizeDelta: {x: 259.76, y: 47.1707}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8849073682876269375
 CanvasRenderer:
@@ -7868,7 +7762,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -812, y: 415.37}
+  m_AnchoredPosition: {x: -812, y: 358.37}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1603852921340948510
@@ -10878,7 +10772,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -522, y: -0.000030518}
+  m_AnchoredPosition: {x: -522, y: -0.000030517578}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &106661521791501619
@@ -10962,7 +10856,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3656775243337591533}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5837780782104802077}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: BuyBiomeKelp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6845833463278087018
 GameObject:
   m_ObjectHideFlags: 0
@@ -11798,8 +11704,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1760143389592601910}
-  - {fileID: 8842882383913538869}
-  - {fileID: 9069191431573494325}
   - {fileID: 7935299690387997737}
   - {fileID: 4082649906011237655}
   - {fileID: 6445361723319744862}
@@ -11811,8 +11715,8 @@ RectTransform:
   - {fileID: 8452321087270060167}
   - {fileID: 2871495206719723598}
   - {fileID: 4982939043955709120}
-  - {fileID: 8231234380408240982}
   - {fileID: 8611153258655304124}
+  - {fileID: 8231234380408240982}
   - {fileID: 5639784546878492762}
   - {fileID: 5718338927879469427}
   - {fileID: 7660736171774617974}
@@ -13568,8 +13472,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.10287501, y: 0.15}
   m_AnchorMax: {x: 0.8977085, y: 0.900111}
-  m_AnchoredPosition: {x: -4.6414185, y: -33.561005}
-  m_SizeDelta: {x: 259.76, y: 152.88}
+  m_AnchoredPosition: {x: -4.6414185, y: -86.416}
+  m_SizeDelta: {x: 259.76, y: 47.171}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5397415102368518427
 CanvasRenderer:
@@ -14073,142 +13977,6 @@ MonoBehaviour:
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
   m_margin: {x: 0, y: 497.44717, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!1 &8621238216189908078
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9069191431573494325}
-  - component: {fileID: 4562914482587762667}
-  - component: {fileID: 8614435339163223674}
-  m_Layer: 5
-  m_Name: Food
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &9069191431573494325
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8621238216189908078}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4516988530011440557}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -290, y: 469.9}
-  m_SizeDelta: {x: 202.421, y: 50.003}
-  m_Pivot: {x: 0.13685517, y: 0.25790405}
---- !u!222 &4562914482587762667
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8621238216189908078}
-  m_CullTransparentMesh: 1
---- !u!114 &8614435339163223674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8621238216189908078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: 'Food : '
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c150b98d70acf7e4eb0ae9f44eeb7c93, type: 2}
-  m_sharedMaterial: {fileID: -2717766744735201409, guid: c150b98d70acf7e4eb0ae9f44eeb7c93, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 75
-  m_fontSizeBase: 75
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 67.78705, y: 0, z: -84.733765, w: -41.156372}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

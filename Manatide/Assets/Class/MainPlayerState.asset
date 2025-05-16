@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d1e31dcc0efda4bbd66f27dc6aa748, type: 3}
   m_Name: MainPlayerState
   m_EditorClassIdentifier: 
-  coins: 5000
+  coins: 120000
   food: 3000
+  BiomeKelp: 0
+  BiomeEpave: 0

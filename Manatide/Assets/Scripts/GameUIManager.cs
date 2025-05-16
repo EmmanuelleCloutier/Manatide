@@ -6,10 +6,7 @@ using System.Collections.Generic;
 public class GameUIManager : MonoBehaviour
 {
     public static GameUIManager Instance;
-	public PlayerState playerState;
 
-    public TextMeshProUGUI coinText;
-    public TextMeshProUGUI foodText;
 
     public GameObject overlayShop;
     public GameObject overlayBiomes;
@@ -30,25 +27,7 @@ public class GameUIManager : MonoBehaviour
 
     void Start()
     {
-        UpdateUI();
-    }
-
-    void UpdateUI()
-    {
-        coinText.text = "Coins: " + playerState.coins;
-        foodText.text = "Food: " + playerState.food;
-    }
-
-    public void AddCoins(int amount)
-    {
-        playerState.coins += amount;
-        UpdateUI();
-    }
-
-    public void AddFood(int amount)
-    {
-        playerState.food += amount;
-        UpdateUI();
+        
     }
 
     public void ToggleOverlay(GameObject overlay)
