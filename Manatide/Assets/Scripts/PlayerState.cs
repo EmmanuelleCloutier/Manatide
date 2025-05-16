@@ -7,6 +7,8 @@ public class PlayerState : ScriptableObject
 	public int coins;
 	public int food;
 
+	public int lvl;
+
 	public bool BiomeKelp;
 	public bool BiomeEpave;
 }

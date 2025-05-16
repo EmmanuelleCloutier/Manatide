@@ -7,9 +7,14 @@ public class ShopManager : MonoBehaviour
 {
     public static ShopManager Instance;
 	public PlayerState playerState;
+	NameGenerator nameGenerator;
 
-	[Header("Players")]
+
+	[Header("Ressources")]
 	public TextMeshProUGUI coinsText;
+	public Transform spawnPoint;
+	public TextMeshProUGUI BiomeText;
+
 
   	[Header("Biomes")]
     public Button btnKelpShop;
@@ -74,12 +79,67 @@ public class ShopManager : MonoBehaviour
 
 	void Start()
 	{
+		//Ressources
   		UpdateCoinsUI();
+		UpdateBiomeUI();
+
+		//Manatees
+		nameGenerator = Object.FindFirstObjectByType<NameGenerator>();
+
+		//Biomes
+		VerifBiome();
 	}
+
+	 public void UpdateBiomeUI()
+    {
+        string biome = GetBiomeName(playerState.lvl);
+        BiomeText.text = biome;
+    }
+
+    string GetBiomeName(int lvl)
+    {
+        switch (lvl)
+        {
+            case 1:
+                return "Biome : Langune";
+            case 2:
+				return "Biome : Kelp";
+            case 3:
+                return "Biome : Épave";
+            default:
+                return "Pas suppose";
+        }
+    }
+		
 
 	public void UpdateCoinsUI()
 	{
     	coinsText.text = playerState.coins.ToString() + " coins";
+	}
+
+//Biome -----------------------------------
+
+	public void VerifBiome()
+	{
+		//biome kelp
+		if (!playerState.BiomeKelp)
+		{	
+			 btnKelpBiome.gameObject.SetActive(false);
+		}
+		else {
+			KelpText.text = "Sold";
+            btnKelpBiome.gameObject.SetActive(true);
+		}
+
+		//biome epave
+		if (!playerState.BiomeKelp)
+		{	
+			 btnEpaveBiome.gameObject.SetActive(false);
+		}
+		else {
+			KelpText.text = "Sold";
+            btnEpaveBiome.gameObject.SetActive(true);
+		}
 	}
 
     public void BuyBiomeKelp()
@@ -90,21 +150,17 @@ public class ShopManager : MonoBehaviour
             {
                 playerState.coins -= PriceBKelp;
                 playerState.BiomeKelp = true;
-				UpdateCoinsUI();
-
+				
                 KelpText.text = "Sold";
-
+				UpdateCoinsUI();
                 btnKelpBiome.gameObject.SetActive(true);
 
-            }
-            else
-            {
-                Debug.Log("Pas assez de coins pour acheter le biome Kelp.");
             }
         }
         else
         {
-            Debug.Log("Biome Kelp déjà acheté.");
+            KelpText.text = "Sold";
+            btnKelpBiome.gameObject.SetActive(true);
         }
     }
 
@@ -116,22 +172,40 @@ public class ShopManager : MonoBehaviour
             {
                 playerState.coins -= PriceBEpave;
                 playerState.BiomeEpave = true;
-				UpdateCoinsUI();
-
+				
                 EpaveText.text = "Sold";
-
-                 btnEpaveBiome.gameObject.SetActive(true);
-            }
-            else
-            {
-                Debug.Log("Pas assez de coins pour acheter le biome Kelp.");
+				UpdateCoinsUI();
+                btnEpaveBiome.gameObject.SetActive(true);
             }
         }
         else
         {
-            Debug.Log("Biome Kelp déjà acheté.");
+            EpaveText.text = "Sold";
+			UpdateCoinsUI();
+            btnEpaveBiome.gameObject.SetActive(true);
         }
     }
+
+//Manatee ----------------------------------------------------------------
+	public void BuyManateType1()
+	{
+		if (playerState.coins >= PriceM1)
+    	{
+        	playerState.coins -= PriceM1;
+       		Instantiate(prefabManateeType1, spawnPoint.position, Quaternion.identity);
+        	UpdateCoinsUI();
+
+        	string generatedName = nameGenerator.GenerateName();
+
+        	ItemManatee newManatee = new ItemManatee
+        	{
+            	itemName = generatedName,
+            	lvl = 1,
+            	type = ManateeType.Type1,
+            	biome = Biome.Langune
+        	};
+    	}
+	}
 
 
  

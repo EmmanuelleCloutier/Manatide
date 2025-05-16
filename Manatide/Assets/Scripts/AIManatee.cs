@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ManateeRoaming2D : MonoBehaviour
+public class AIManatee : MonoBehaviour
 {
     [Header("Roaming Settings")]
     public float roamRadius = 5f;
