@@ -5442,6 +5442,77 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &3460861577415836998
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6783025828777717141}
+  - component: {fileID: 5837780782104802077}
+  m_Layer: 0
+  m_Name: ShopManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6783025828777717141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3460861577415836998}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 19.907227, y: -78.478424, z: 3.0992193}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4516988530011440557}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5837780782104802077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3460861577415836998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e717e97d6c33614e97bede9cee86e70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btnManatee1: {fileID: 5135406048494554576}
+  PriceM1: 100
+  prefabManateeType1: {fileID: 6991527556628755838, guid: da96d50903b33fc40b07844e4ab7fd79, type: 3}
+  btnManatee2: {fileID: 1772953717654977941}
+  PriceM2: 200
+  prefabManateeType2: {fileID: 4769219138305956075, guid: ae745cc3a5266c24fb1a8425414a28db, type: 3}
+  btnManatee3: {fileID: 2377994356643581127}
+  PriceM3: 300
+  prefabManateeType3: {fileID: 7268472527052547354, guid: e1d09e4dbc033c94c9086d6e6ac748f3, type: 3}
+  btnCreatures1: {fileID: 0}
+  PriceC1: 100
+  prefabCreaturesType1: {fileID: 0}
+  btnCreatures2: {fileID: 0}
+  PriceC2: 200
+  prefabCreaturesType2: {fileID: 0}
+  btnCreatures3: {fileID: 0}
+  PriceC3: 300
+  prefabCreaturesType3: {fileID: 0}
+  btnDecoration1: {fileID: 4405402167312874785}
+  PriceD1: 100
+  prefabDecorationType1: {fileID: 0}
+  btnDecoration2: {fileID: 0}
+  PriceD2: 200
+  prefabDecorationType2: {fileID: 0}
+  btnDecoration3: {fileID: 0}
+  PriceD3: 300
+  prefabDecorationType3: {fileID: 0}
 --- !u!1 &3473767505094814595
 GameObject:
   m_ObjectHideFlags: 0
@@ -11746,6 +11817,7 @@ RectTransform:
   - {fileID: 5718338927879469427}
   - {fileID: 7660736171774617974}
   - {fileID: 3170207830037641556}
+  - {fileID: 6783025828777717141}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

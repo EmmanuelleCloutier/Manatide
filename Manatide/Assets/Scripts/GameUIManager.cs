@@ -99,8 +99,8 @@ public class GameUIManager : MonoBehaviour
 
 	public void ShowOverlayShopDecoration()
 	{
-    HideMainUI();
-    overlayShopDecoration.SetActive(true);
+    	HideMainUI();
+    	overlayShopDecoration.SetActive(true);
 	}
 
 	public void ShowOverlayShopBiome()
