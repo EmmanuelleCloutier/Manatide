@@ -14,6 +14,7 @@ public class ShopManager : MonoBehaviour
 	public TextMeshProUGUI coinsText;
 	public Transform spawnPoint;
 	public TextMeshProUGUI BiomeText;
+	public ManateeManager manateeManager;
 
 
   	[Header("Biomes")]
@@ -187,12 +188,12 @@ public class ShopManager : MonoBehaviour
     }
 
 //Manatee ----------------------------------------------------------------
-	public void BuyManateType1()
+	public void BuyManateeType1()
 	{
-		if (playerState.coins >= PriceM1)
+    	if (playerState.coins >= PriceM1)
     	{
         	playerState.coins -= PriceM1;
-       		Instantiate(prefabManateeType1, spawnPoint.position, Quaternion.identity);
+        	Instantiate(prefabManateeType1, spawnPoint.position, Quaternion.identity);
         	UpdateCoinsUI();
 
         	string generatedName = nameGenerator.GenerateName();
@@ -204,9 +205,54 @@ public class ShopManager : MonoBehaviour
             	type = ManateeType.Type1,
             	biome = Biome.Langune
         	};
+
+        	manateeManager.AddManatee(newManatee);
     	}
 	}
 
+	public void BuyManateeType2()
+	{
+    	if (playerState.coins >= PriceM2)
+    	{
+        	playerState.coins -= PriceM2;
+        	Instantiate(prefabManateeType2, spawnPoint.position, Quaternion.identity);
+        	UpdateCoinsUI();
+
+        	string generatedName = nameGenerator.GenerateName();
+
+        	ItemManatee newManatee = new ItemManatee
+        	{
+            	itemName = generatedName,
+            	lvl = 1,
+            	type = ManateeType.Type2,
+            	biome = Biome.Langune
+        	};
+
+        	manateeManager.AddManatee(newManatee);
+    	}
+	}
+
+	public void BuyManateeType3()
+	{
+    	if (playerState.coins >= PriceM3)
+    	{
+        	playerState.coins -= PriceM3;
+        	Instantiate(prefabManateeType3, spawnPoint.position, Quaternion.identity);
+        	UpdateCoinsUI();
+
+        	string generatedName = nameGenerator.GenerateName();
+
+        	ItemManatee newManatee = new ItemManatee
+        	{
+            	itemName = generatedName,
+            	lvl = 1,
+            	type = ManateeType.Type3,
+            	biome = Biome.Langune
+        	};
+
+        	manateeManager.AddManatee(newManatee);
+    	}
+	}
 
  
 }

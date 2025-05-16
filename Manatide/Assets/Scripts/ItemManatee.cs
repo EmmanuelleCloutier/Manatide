@@ -23,7 +23,7 @@ public enum ManateeType
 
 public enum Biome
 {
-    Langune,
-    Kelp,
-    Epave
+    Langune = 1,
+    Kelp = 2,
+    Epave = 3
 }
