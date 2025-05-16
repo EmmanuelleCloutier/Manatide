@@ -3019,7 +3019,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2231461725370345879}
         m_TargetAssemblyTypeName: GameUIManager, Assembly-CSharp
-        m_MethodName: HideMainUI
+        m_MethodName: ReturnToShop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3579,10 +3579,6 @@ MonoBehaviour:
   overlayShopManatee: {fileID: 8125767172896300705}
   overlayShopCreature: {fileID: 8730758413186763223}
   overlayShopDecoration: {fileID: 1217409645365087600}
-  manateeInfoParent: {fileID: 0}
-  manateeInfoPrefab: {fileID: 0}
-  btnKelp: {fileID: 7382926128314869423}
-  btnEpave: {fileID: 8084694010279755595}
 --- !u!1 &2042494361332455426
 GameObject:
   m_ObjectHideFlags: 0
@@ -5949,7 +5945,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2231461725370345879}
         m_TargetAssemblyTypeName: GameUIManager, Assembly-CSharp
-        m_MethodName: HideMainUI
+        m_MethodName: ReturnToShop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7145,7 +7141,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2231461725370345879}
         m_TargetAssemblyTypeName: GameUIManager, Assembly-CSharp
-        m_MethodName: HideMainUI
+        m_MethodName: ReturnToShop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7674,7 +7670,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2231461725370345879}
         m_TargetAssemblyTypeName: GameUIManager, Assembly-CSharp
-        m_MethodName: HideMainUI
+        m_MethodName: ReturnToShop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7887,7 +7883,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2231461725370345879}
         m_TargetAssemblyTypeName: GameUIManager, Assembly-CSharp
-        m_MethodName: HideMainUI
+        m_MethodName: ReturnToShop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9112,7 +9108,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2231461725370345879}
         m_TargetAssemblyTypeName: GameUIManager, Assembly-CSharp
-        m_MethodName: HideMainUI
+        m_MethodName: ReturnToShop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

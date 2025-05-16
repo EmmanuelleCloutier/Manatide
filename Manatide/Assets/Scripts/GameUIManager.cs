@@ -21,18 +21,9 @@ public class GameUIManager : MonoBehaviour
 	public GameObject overlayShopCreature;
 	public GameObject overlayShopDecoration;
 
-    public GameObject manateeInfoParent; // conteneur qui contient tous les enfants manatee
-    public GameObject manateeInfoPrefab; // prefab avec image, nom, lvl
-
-    public Button btnKelp;
-    public Button btnEpave;
 
     private int coins = 100;
     private int food = 0;
-    private int foodBought = 0;
-
-    private bool kelpBought = false;
-    private bool epaveBought = false;
 
     void Awake()
     {
@@ -42,7 +33,6 @@ public class GameUIManager : MonoBehaviour
     void Start()
     {
         UpdateUI();
-        RefreshBiomeButtons();
     }
 
     void UpdateUI()
@@ -97,67 +87,6 @@ public class GameUIManager : MonoBehaviour
         Application.Quit();
     }
 
-    // Achat de manatee
-    public void BuyManatee(GameObject prefab, int cost, string name)
-    {
-        if (coins < cost) return;
-
-        coins -= cost;
-        UpdateUI();
-
-        // Ajouter au UI info
-        GameObject newInfo = Instantiate(manateeInfoPrefab, manateeInfoParent.transform);
-        newInfo.transform.Find("NameText").GetComponent<TextMeshProUGUI>().text = name;
-        newInfo.transform.Find("LvlText").GetComponent<TextMeshProUGUI>().text = "LVL 0";
-        // (si tu veux mettre une sprite)
-        // newInfo.transform.Find("ImageSprite").GetComponent<Image>().sprite = prefab.GetComponent<SpriteRenderer>().sprite;
-    }
-
-    // Achat de nourriture (3 max)
-    public void BuyFood()
-    {
-        if (foodBought >= 3) return;
-
-        int price = 50 * (foodBought + 1);
-        if (coins < price) return;
-
-        coins -= price;
-        foodBought++;
-        food++;
-        UpdateUI();
-
-        // TODO: mettre à jour l'affichage du prix et "sold" dans l'UI
-        if (foodBought == 3)
-        {
-            Debug.Log("Food max acheté (3/3)");
-            // désactiver le bouton ou afficher "Sold"
-        }
-    }
-
-    // Achat de biome
-    public void BuyBiome(string biome)
-    {
-        if (biome == "kelp" && !kelpBought && coins >= 500)
-        {
-            coins -= 500;
-            kelpBought = true;
-        }
-        else if (biome == "epave" && !epaveBought && coins >= 1000)
-        {
-            coins -= 1000;
-            epaveBought = true;
-        }
-
-        UpdateUI();
-        RefreshBiomeButtons();
-    }
-
-    void RefreshBiomeButtons()
-    {
-        btnKelp.interactable = kelpBought;
-        btnEpave.interactable = epaveBought;
-    }
-
 	public void ShowOverlayShopManatee()
 	{
 		HideMainUI();
@@ -186,6 +115,12 @@ public class GameUIManager : MonoBehaviour
 	{	
     	HideMainUI();
     	overlayShopFood.SetActive(true);
+	}
+
+	public void ReturnToShop()
+	{
+		HideMainUI();
+		overlayShop.SetActive(true);
 	}
 
 }
