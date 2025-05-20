@@ -12,6 +12,7 @@ public class ShopManager : MonoBehaviour
 
 	[Header("Ressources")]
 	public TextMeshProUGUI coinsText;
+	public TextMeshProUGUI foodText;
 	public Transform spawnPoint;
 	public TextMeshProUGUI BiomeText;
 	public ManateeManager manateeManager;
@@ -65,17 +66,28 @@ public class ShopManager : MonoBehaviour
 
   	[Header("Food")]
     public Button btFood;
+	public TextMeshProUGUI FoodText;
+	public TextMeshProUGUI PriceText;
+	public TextMeshProUGUI LimitText;
     public int PriceFood;
 	public int MaxLimit; 
+	public int NbPressed;
 
 	public Button btnPack1;
-	public int PrincePack1;
+	public int PricePack1;
+	public int FoodPack1;
+
 	public Button btnPack2;
-	public int PrincePack2;
+	public int PricePack2;
+	public int FoodPack2;
+
 	public Button btnPack3;
-	public int PrincePack3;
+	public int PricePack3;
+	public int FoodPack3;
+
 	public Button btnPack4;
-	public int PrincePack4;
+	public int PricePack4;
+	public int FoodPack4;
 
 
 	void Start()
@@ -83,6 +95,7 @@ public class ShopManager : MonoBehaviour
 		//Ressources
   		UpdateCoinsUI();
 		UpdateBiomeUI();
+		UpdateFoodUI();
 
 		//Manatees
 		nameGenerator = Object.FindFirstObjectByType<NameGenerator>();
@@ -118,6 +131,11 @@ public class ShopManager : MonoBehaviour
     	coinsText.text = playerState.coins.ToString() + " coins";
 	}
 
+	public void UpdateFoodUI()
+	{
+		foodText.text = playerState.food.ToString() + " food";
+	}
+
 //Biome -----------------------------------
 
 	public void VerifBiome()
@@ -138,9 +156,12 @@ public class ShopManager : MonoBehaviour
 			 btnEpaveBiome.gameObject.SetActive(false);
 		}
 		else {
-			KelpText.text = "Sold";
+			EpaveText.text = "Sold";
             btnEpaveBiome.gameObject.SetActive(true);
 		}
+
+		//food 
+		UpdateFoodUI();
 	}
 
     public void BuyBiomeKelp()
@@ -254,6 +275,75 @@ public class ShopManager : MonoBehaviour
     	}
 	}
 
- 
+//Food------------------------------------------------------
+
+	public void UpdateFoodAlgueUI()
+	{
+		LimitText.text = NbPressed + "/3";
+	}
+
+	public void BuyFoodAlguee()
+	{
+		if(NbPressed != MaxLimit)
+		{
+			if (playerState.coins >= PriceFood)
+			{
+				//spawn pour placer de la nourriture 
+				playerState.coins -= PriceFood;
+				NbPressed++; 
+				UpdateCoinsUI();
+				UpdateFoodAlgueUI();
+			}
+		}
+		else{
+			FoodText.gameObject.SetActive(true);
+			PriceText.gameObject.SetActive(false);
+			LimitText.gameObject.SetActive(false);
+		}
+	}
+
+	public void BuyPack1()
+	{ 
+		if (playerState.coins >= PricePack1)
+		{
+			playerState.coins -= PricePack1;
+			playerState.food += FoodPack1;
+			UpdateCoinsUI();
+			UpdateFoodUI();
+		}
+	}
+
+	public void BuyPack2()
+	{ 
+		if (playerState.coins >= PricePack2)
+		{
+			playerState.coins -= PricePack2;
+			playerState.food += FoodPack2;
+			UpdateCoinsUI();
+			UpdateFoodUI();
+		}
+	}
+
+	public void BuyPack3()
+	{ 
+		if (playerState.coins >= PricePack3)
+		{
+			playerState.coins -= PricePack3;
+			playerState.food += FoodPack3;
+			UpdateCoinsUI();
+			UpdateFoodUI();
+		}
+	}
+
+	public void BuyPack4()
+	{ 
+		if (playerState.coins >= PricePack4)
+		{
+			playerState.coins -= PricePack4;
+			playerState.food += FoodPack4;
+			UpdateCoinsUI();
+			UpdateFoodUI();
+		}
+	}
 }
 
