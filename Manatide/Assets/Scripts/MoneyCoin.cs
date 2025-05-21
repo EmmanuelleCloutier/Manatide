@@ -8,7 +8,7 @@ public class MoneyCoin : MonoBehaviour
 
     void OnMouseDown()
     {
-            playerState.coins += coinValue;
+             playerState.AddCoins(coinValue); 
             Destroy(gameObject);
     }
 }

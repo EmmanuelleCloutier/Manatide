@@ -92,10 +92,13 @@ public class ShopManager : MonoBehaviour
 
 	void Start()
 	{
+  		playerState.OnCoinsChanged += UpdateCoinsUI;
+    	playerState.OnFoodChanged += UpdateFoodUI;
 		//Ressources
   		UpdateCoinsUI();
 		UpdateBiomeUI();
 		UpdateFoodUI();
+	
 
 		//Manatees
 		nameGenerator = Object.FindFirstObjectByType<NameGenerator>();
