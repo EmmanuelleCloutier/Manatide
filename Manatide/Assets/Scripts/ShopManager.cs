@@ -65,6 +65,9 @@ public class ShopManager : MonoBehaviour
 	public int PricePack4;
 	public int FoodPack4;
 
+	[Header("Algues")]
+	public GameObject algueGroup;
+
 
 	void Start()
 	{
@@ -299,23 +302,36 @@ public void BuyManateeType3()
 
 	public void BuyFoodAlguee()
 	{
-		if(NbPressed != MaxLimit)
+		if (NbPressed <= MaxLimit)
 		{
 			if (playerState.coins >= PriceFood)
 			{
-				//spawn pour placer de la nourriture 
 				playerState.coins -= PriceFood;
-				NbPressed++; 
+				NbPressed++;
 				UpdateCoinsUI();
 				UpdateFoodAlgueUI();
+
+				// Activer l'algue correspondante à NbPressed
+				string algueName = "Algue" + (NbPressed + 2); // car Algue1 et Algue2 sont déjà actives
+				Transform algue = algueGroup.transform.Find(algueName);
+
+				if (algue != null)
+				{
+					algue.gameObject.SetActive(true);
+				}
+				else
+				{
+					Debug.LogWarning($"Algue '{algueName}' introuvable dans {algueGroup.name}");
+				}
 			}
 		}
-		else{
+		else
+		{
 			FoodText.gameObject.SetActive(true);
 			PriceText.gameObject.SetActive(false);
 			LimitText.gameObject.SetActive(false);
 		}
-	}
+}
 
 	public void BuyPack1()
 	{ 

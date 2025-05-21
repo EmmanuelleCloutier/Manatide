@@ -1,0 +1,74 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class FoodCoinSpawner : MonoBehaviour
+{
+    public GameObject foodCoinPrefab;
+    public float spawnInterval = 5f;
+    public PlayerState playerState;
+
+    void Start()
+    {
+        StartCoroutine(SpawnFoodCoinsRoutine());
+    }
+
+    IEnumerator SpawnFoodCoinsRoutine()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(spawnInterval);
+            TrySpawnCoin();
+        }
+    }
+
+    void TrySpawnCoin()
+    {
+        List<Collider2D> activeAlgueColliders = new List<Collider2D>();
+
+        foreach (Transform child in transform)
+        {
+            if (child.gameObject.activeInHierarchy)
+            {
+                Collider2D col = child.GetComponent<Collider2D>();
+                if (col != null)
+                    activeAlgueColliders.Add(col);
+            }
+        }
+
+        if (activeAlgueColliders.Count == 0) return;
+
+        // Choisir une algue au hasard
+        Collider2D targetAlgae = activeAlgueColliders[Random.Range(0, activeAlgueColliders.Count)];
+
+        // Obtenir une position aléatoire dans son collider
+        Vector2 spawnPosition = GetRandomPointInCollider(targetAlgae);
+
+        // Spawner le coin
+        GameObject coin = Instantiate(foodCoinPrefab, spawnPosition, Quaternion.identity);
+
+        // S'assurer que le coin est devant (sorting layer ou Z)
+        SpriteRenderer sr = coin.GetComponent<SpriteRenderer>();
+        if (sr != null)
+            sr.sortingOrder = 10; // plus grand que celui des algues
+    }
+
+    Vector2 GetRandomPointInCollider(Collider2D collider)
+    {
+        Bounds bounds = collider.bounds;
+        Vector2 point;
+
+        int safety = 0;
+        do
+        {
+            point = new Vector2(
+                Random.Range(bounds.min.x, bounds.max.x),
+                Random.Range(bounds.min.y, bounds.max.y)
+            );
+            safety++;
+            if (safety > 30) break;
+        } while (!collider.OverlapPoint(point));
+
+        return point;
+    }
+}
