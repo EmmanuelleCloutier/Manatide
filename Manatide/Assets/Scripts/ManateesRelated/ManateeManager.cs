@@ -4,7 +4,7 @@ using UnityEngine;
 public class ManateeManager : MonoBehaviour
 {
     public List<ItemManatee> ownedManatees = new List<ItemManatee>();
-	private List<GameObject> spawnedManatees = new List<GameObject>();
+	public List<GameObject> spawnedManatees = new List<GameObject>();
 
 	[Header("UI")]
 	public ManateeInfoUI manateeInfoUI;
@@ -97,15 +97,15 @@ public class ManateeManager : MonoBehaviour
         }
     }
     
-    private Sprite GetSpriteForType(ManateeType type)
-    {
-	    foreach (var pair in manateeInfoUI.spriteByTypeList)
-	    {
-		    if (pair.type == type)
-			    return pair.sprite;
-	    }
-	    return null;
-    }
+   public Sprite GetSpriteForType(ManateeType type)
+	{
+    	foreach (var pair in manateeInfoUI.spriteByTypeList)
+    	{
+        	if (pair.type == type)
+            	return pair.sprite;
+    	}
+    	return null;
+	}
 
 
     public void AddManatee(ItemManatee newManatee)

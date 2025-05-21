@@ -209,71 +209,107 @@ public class ShopManager : MonoBehaviour
     }
 
 //Manatee ----------------------------------------------------------------
-	public void BuyManateeType1()
-	{
-    	if (playerState.coins >= PriceM1)
-    	{
-        	playerState.coins -= PriceM1;
-        	Instantiate(prefabManateeType1, spawnPoint.position, Quaternion.identity);
-        	UpdateCoinsUI();
+public void BuyManateeType1()
+{
+    if (playerState.coins >= PriceM1)
+    {
+       
+        string generatedName = nameGenerator.GenerateName();
+        ItemManatee newManatee = new ItemManatee
+        {
+            itemName = generatedName,
+            lvl = 1,
+            type = ManateeType.Type1,
+            biome = Biome.Langune
+        };
 
-        	string generatedName = nameGenerator.GenerateName();
+     
+        GameObject instance = Instantiate(prefabManateeType1, spawnPoint.position, Quaternion.identity);
 
-        	ItemManatee newManatee = new ItemManatee
-        	{
-            	itemName = generatedName,
-            	lvl = 1,
-            	type = ManateeType.Type1,
-            	biome = Biome.Langune
-        	};
+     
+        manateeManager.AddManatee(newManatee);
+        manateeManager.spawnedManatees.Add(instance);
 
-        	manateeManager.AddManatee(newManatee);
-    	}
-	}
+        AIManatee ai = instance.GetComponent<AIManatee>();
+        if (ai != null)
+        {
+            ai.data = newManatee;
+            ai.sprite = manateeManager.GetSpriteForType(newManatee.type);
+        }
 
-	public void BuyManateeType2()
-	{
-    	if (playerState.coins >= PriceM2)
-    	{
-        	playerState.coins -= PriceM2;
-        	Instantiate(prefabManateeType2, spawnPoint.position, Quaternion.identity);
-        	UpdateCoinsUI();
+        manateeManager.manateeInfoUI.RefreshUI();
+        UpdateCoinsUI();
 
-        	string generatedName = nameGenerator.GenerateName();
+        playerState.coins -= PriceM1;
+    }
+}
 
-        	ItemManatee newManatee = new ItemManatee
-        	{
-            	itemName = generatedName,
-            	lvl = 1,
-            	type = ManateeType.Type2,
-            	biome = Biome.Langune
-        	};
 
-        	manateeManager.AddManatee(newManatee);
-    	}
-	}
+public void BuyManateeType2()
+{
+    if (playerState.coins >= PriceM2)
+    {
+        string generatedName = nameGenerator.GenerateName();
+        ItemManatee newManatee = new ItemManatee
+        {
+            itemName = generatedName,
+            lvl = 1,
+            type = ManateeType.Type2,
+            biome = Biome.Langune
+        };
 
-	public void BuyManateeType3()
-	{
-    	if (playerState.coins >= PriceM3)
-    	{
-        	playerState.coins -= PriceM3;
-        	Instantiate(prefabManateeType3, spawnPoint.position, Quaternion.identity);
-        	UpdateCoinsUI();
+        GameObject instance = Instantiate(prefabManateeType2, spawnPoint.position, Quaternion.identity);
 
-        	string generatedName = nameGenerator.GenerateName();
+        manateeManager.AddManatee(newManatee);
+        manateeManager.spawnedManatees.Add(instance);
 
-        	ItemManatee newManatee = new ItemManatee
-        	{
-            	itemName = generatedName,
-            	lvl = 1,
-            	type = ManateeType.Type3,
-            	biome = Biome.Langune
-        	};
+        AIManatee ai = instance.GetComponent<AIManatee>();
+        if (ai != null)
+        {
+            ai.data = newManatee;
+            ai.sprite = manateeManager.GetSpriteForType(newManatee.type);
+        }
 
-        	manateeManager.AddManatee(newManatee);
-    	}
-	}
+        manateeManager.manateeInfoUI.RefreshUI();
+        UpdateCoinsUI();
+
+        playerState.coins -= PriceM2;
+    }
+}
+
+
+public void BuyManateeType3()
+{
+    if (playerState.coins >= PriceM3)
+    {
+        string generatedName = nameGenerator.GenerateName();
+        ItemManatee newManatee = new ItemManatee
+        {
+            itemName = generatedName,
+            lvl = 1,
+            type = ManateeType.Type3,
+            biome = Biome.Langune
+        };
+
+        GameObject instance = Instantiate(prefabManateeType3, spawnPoint.position, Quaternion.identity);
+
+        manateeManager.AddManatee(newManatee);
+        manateeManager.spawnedManatees.Add(instance);
+
+        AIManatee ai = instance.GetComponent<AIManatee>();
+        if (ai != null)
+        {
+            ai.data = newManatee;
+            ai.sprite = manateeManager.GetSpriteForType(newManatee.type);
+        }
+
+        manateeManager.manateeInfoUI.RefreshUI();
+        UpdateCoinsUI();
+
+        playerState.coins -= PriceM3;
+    }
+}
+
 
 //Food------------------------------------------------------
 
