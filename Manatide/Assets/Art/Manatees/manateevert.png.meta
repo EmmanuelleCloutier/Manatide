@@ -234,7 +234,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      manateevert_0: -8285223938398401066
+      manateevert_1: 6160162383100536720
+      manateevert_2: -3837421247172246480
+      manateevert_3: 2840670011137300185
+      manateevert_4: 7286495557312487869
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -234,7 +234,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      manateegris_0: -3701737102429426098
+      manateegris_1: 4029806569238746229
+      manateegris_2: -2596477586200946523
+      manateegris_3: 8529942816072683527
+      manateegris_4: -4773039986987053419
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

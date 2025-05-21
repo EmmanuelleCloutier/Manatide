@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      leaf-mangrove_0: -1679296318450668896
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      flower-water-hyacinth-plant_0: 7803155990277661657
+      flower-water-hyacinth-plant_1: 4043030138268103850
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

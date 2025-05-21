@@ -492,47 +492,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8537944848721979575, guid: 88dc675de10ddc245a922e315366d64a, type: 3}
   m_PrefabInstance: {fileID: 838515380}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1211594267 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6932137049543088223, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+--- !u!114 &1264677806 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
   m_PrefabInstance: {fileID: 5409584639427875649}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1211594271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1211594267}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f27a285e5ed7d14fb1980c25871e7d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manateeCardPrefab: {fileID: 7250938190060692682, guid: ec6efafbdd0d6aa4ebb81f1284485212, type: 3}
-  contentParent: {fileID: 1474370004}
-  manateeManager: {fileID: 3238154658792052242}
-  playerState: {fileID: 11400000, guid: 1539bc16371822340868bc95d668a50e, type: 2}
-  spriteByTypeList:
-  - type: 1
-    sprite: {fileID: 5235321499061723878, guid: b816e9e76707b7e4980b295b50bd86ba, type: 3}
-  - type: 2
-    sprite: {fileID: 5777675318904165673, guid: 5ffd668092fa353459349c8378765a2e, type: 3}
-  - type: 3
-    sprite: {fileID: -7687219920802530846, guid: 3ef3a75ecf0568a4a9be93922541dc0d, type: 3}
-  - type: 12
-    sprite: {fileID: 3298308381740601934, guid: 3d6c717d3d630b64b9f3b68385687335, type: 3}
-  - type: 13
-    sprite: {fileID: -7624796473339272443, guid: 54b2238c0c1db674e9205c83ec378e5d, type: 3}
-  - type: 23
-    sprite: {fileID: -3933368182094344625, guid: b723d86e47c20ae419a3c0b259fe5538, type: 3}
-  - type: 123
-    sprite: {fileID: -484400806558541540, guid: 73d073c3e0f1f2b47a5a06fc18081d23, type: 3}
---- !u!224 &1474370004 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 387367538198445107, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
-  m_PrefabInstance: {fileID: 5409584639427875649}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1746076436
 GameObject:
   m_ObjectHideFlags: 0
@@ -18242,7 +18212,7 @@ PrefabInstance:
     - target: {fileID: 5106351573213067196, guid: 5bbf7d20588981843bc96f0d907c2b25, type: 3}
       propertyPath: manateeInfoUI
       value: 
-      objectReference: {fileID: 1211594271}
+      objectReference: {fileID: 1264677806}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18307,6 +18277,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: manateeManager
+      value: 
+      objectReference: {fileID: 3238154658792052242}
     - target: {fileID: 4516988530011440557, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -18435,6 +18409,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7720226036726942381, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 4.721985
+      objectReference: {fileID: 0}
+    - target: {fileID: 7720226036726942381, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -111.54001
+      objectReference: {fileID: 0}
     - target: {fileID: 8787705923482808376, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -18451,10 +18433,7 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 1380087412645310021, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6932137049543088223, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1211594271}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

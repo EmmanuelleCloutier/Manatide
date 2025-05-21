@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      flower-water-hyacinth-small_0: -7063057068316115741
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

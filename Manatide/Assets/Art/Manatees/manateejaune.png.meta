@@ -259,7 +259,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      manateejaune_0: 1119015606641800618
+      manateejaune_1: -2234222191884708360
+      manateejaune_2: -972484772045425371
+      manateejaune_3: -5561621289534655069
+      manateejaune_4: -3782585041552164819
+      manateejaune_5: 528273031146495535
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
