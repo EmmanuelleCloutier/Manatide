@@ -25,6 +25,7 @@ public class GameUIManager : MonoBehaviour
 	public Button btnInfo; 
 	public Button btnBiome;
 	public Button btnShop;
+	public Button BtnBreeding;
 
     void Awake()
     {
@@ -52,10 +53,12 @@ public class GameUIManager : MonoBehaviour
         overlayShop.SetActive(false);
         overlayBiomes.SetActive(false);
         overlayManateeInfo.SetActive(false);
+		overlayBreeding.SetActive(false);
   		overlayShopManatee.SetActive(false);
         overlayShopBiome.SetActive(false);
         overlayShopFood.SetActive(false);
         manateeUI.SetActive(false);
+		BtnBreeding.gameObject.SetActive(true);
     }
 
 	public void Normal()
@@ -70,6 +73,7 @@ public class GameUIManager : MonoBehaviour
 	public void HideEverything()
 	{
 		overlayShop.SetActive(false);
+		overlayBreeding.SetActive(false);
         overlayBiomes.SetActive(false);
         overlayManateeInfo.SetActive(false);
   		overlayShopManatee.SetActive(false);
@@ -81,7 +85,11 @@ public class GameUIManager : MonoBehaviour
 		btnShop.gameObject.SetActive(false);
 	}
 
-
+	public void OverlayBreedingCenter()
+	{
+		BtnBreeding.gameObject.SetActive(false);
+		overlayBreeding.SetActive(true);
+	}
 
     public void MuteAudio()
     {

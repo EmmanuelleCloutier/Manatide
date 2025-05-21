@@ -46,10 +46,10 @@ public class ManateeSingleUI : MonoBehaviour
         if (currentManatee.lvl >= MaxLevel) return;
 
         // Vérifie si on a assez de nourriture
-        if (playerState.food < FeedCost) return;
+        if (playerState.food < FeedCost)  return;
 
         // Dépense et augmente le niveau
-        playerState.food -= FeedCost;
+        playerState.SpendFood(FeedCost);
         currentManatee.lvl += 1;
 
         UpdateLevelUI();

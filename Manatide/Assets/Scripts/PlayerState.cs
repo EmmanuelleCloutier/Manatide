@@ -34,4 +34,12 @@ public class PlayerState : ScriptableObject
         food += amount;
         OnFoodChanged?.Invoke();
     }
+
+	public void SpendFood(int amount)
+	{
+    	food -= amount;
+    	OnFoodChanged?.Invoke();
+	}
+
+
 }

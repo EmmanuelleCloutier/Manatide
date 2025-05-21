@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8313458470447298033}
   - component: {fileID: 641460898234369388}
+  - component: {fileID: 6017150401796110766}
   m_Layer: 0
   m_Name: Type123
   m_TagString: Untagged
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: -7624796473339272443, guid: 54b2238c0c1db674e9205c83ec378e5d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -87,3 +88,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6017150401796110766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3396228640903903102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7469671023bee642bb046ce9c80491d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roamRadius: 5
+  roamDelay: 3
+  moveSpeed: 0.25
+  coinPrefab: {fileID: 0}
+  minCoinSpawnTime: 45
+  maxCoinSpawnTime: 60
+  data:
+    itemName: 
+    lvl: 0
+    type: 0
+    biome: 0
+  sprite: {fileID: 0}
