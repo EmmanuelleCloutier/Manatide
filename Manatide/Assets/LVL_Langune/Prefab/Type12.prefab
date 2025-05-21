@@ -103,3 +103,12 @@ MonoBehaviour:
   roamRadius: 5
   roamDelay: 3
   moveSpeed: 1
+  coinPrefab: {fileID: 6252752130863341971, guid: 962334f8ce0b64f438ec1c8f30fa7517, type: 3}
+  minCoinSpawnTime: 45
+  maxCoinSpawnTime: 60
+  data:
+    itemName: 
+    lvl: 0
+    type: 0
+    biome: 0
+  sprite: {fileID: 0}

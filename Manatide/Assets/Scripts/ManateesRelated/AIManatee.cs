@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class AIManatee : MonoBehaviour
 {
@@ -6,6 +7,11 @@ public class AIManatee : MonoBehaviour
     public float roamRadius = 5f;
     public float roamDelay = 3f;
     public float moveSpeed = 1f; 
+    
+    [Header("Coin Spawn Settings")]
+    public GameObject coinPrefab; 
+    public float minCoinSpawnTime = 5f; 
+    public float maxCoinSpawnTime = 15f;
 
     private Vector2 targetPosition;
     private float timer;
@@ -26,6 +32,8 @@ public class AIManatee : MonoBehaviour
         timer = roamDelay;
         PickNewDestination();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        
+        StartCoroutine(SpawnCoinRandomly());
     }
 
     void Update()
@@ -69,5 +77,23 @@ public class AIManatee : MonoBehaviour
         } while ((newTarget.x < min.x || newTarget.x > max.x || newTarget.y < min.y || newTarget.y > max.y) && attempts > 0);
 
         targetPosition = (attempts > 0) ? newTarget : transform.position;
+    }
+    
+    IEnumerator SpawnCoinRandomly()
+    {
+        while (true)
+        {
+            float waitTime = Random.Range(minCoinSpawnTime, maxCoinSpawnTime);
+            yield return new WaitForSeconds(waitTime);
+
+            if (coinPrefab != null)
+            {
+                Instantiate(coinPrefab, transform.position, Quaternion.identity);
+            }
+            else
+            {
+                Debug.LogWarning("Aucun prefab de pièce assigné à " + name);
+            }
+        }
     }
 }
