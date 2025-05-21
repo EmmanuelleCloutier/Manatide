@@ -14,9 +14,14 @@ public class ManateeManager : MonoBehaviour
 
     public Transform spawnPoint;
 
+	[Header("Manatees")]
     public GameObject prefabType1;
     public GameObject prefabType2;
     public GameObject prefabType3;
+	public GameObject prefabType12;
+ 	public GameObject prefabType13;
+ 	public GameObject prefabType23;
+ 	public GameObject prefabType123;
 
     private void Start()
     {
@@ -125,6 +130,14 @@ public class ManateeManager : MonoBehaviour
                 return prefabType2;
             case ManateeType.Type3:
                 return prefabType3;
+			 case ManateeType.Type12:
+                return prefabType12;
+			 case ManateeType.Type13:
+                return prefabType13;
+			 case ManateeType.Type23:
+                return prefabType23;
+			 case ManateeType.Type123:
+                return prefabType123;
             default:
                 return null;
         }
