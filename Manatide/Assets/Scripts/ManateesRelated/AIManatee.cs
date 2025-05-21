@@ -10,6 +10,16 @@ public class AIManatee : MonoBehaviour
     private Vector2 targetPosition;
     private float timer;
     private SpriteRenderer spriteRenderer;
+    
+    public ItemManatee data;
+    public Sprite sprite;
+    
+    
+    void OnMouseDown()
+    {
+        GameUIManager.Instance.ShowOverlayManateeUI();
+        ManateeSingleUI.Instance.Display(data, sprite);
+    }
 
     void Start()
     {

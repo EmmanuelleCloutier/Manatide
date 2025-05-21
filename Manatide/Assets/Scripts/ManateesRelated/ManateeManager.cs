@@ -6,7 +6,9 @@ public class ManateeManager : MonoBehaviour
     public List<ItemManatee> ownedManatees = new List<ItemManatee>();
 	private List<GameObject> spawnedManatees = new List<GameObject>();
 
-
+	[Header("UI")]
+	public ManateeInfoUI manateeInfoUI;
+	
     [Header("Dependencies")]
     public PlayerState playerState;
 
@@ -76,6 +78,16 @@ public class ManateeManager : MonoBehaviour
                 {
                     GameObject instance = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
 					spawnedManatees.Add(instance);
+					
+					AIManatee ai = instance.GetComponent<AIManatee>();
+					if (ai != null)
+					{
+						ai.data = manatee;
+
+						// Récupère le bon sprite à partir du type
+						Sprite sprite = GetSpriteForType(manatee.type);
+						ai.sprite = sprite;
+					}
 
                 }
 				else {
@@ -84,6 +96,17 @@ public class ManateeManager : MonoBehaviour
             }
         }
     }
+    
+    private Sprite GetSpriteForType(ManateeType type)
+    {
+	    foreach (var pair in manateeInfoUI.spriteByTypeList)
+	    {
+		    if (pair.type == type)
+			    return pair.sprite;
+	    }
+	    return null;
+    }
+
 
     public void AddManatee(ItemManatee newManatee)
     {

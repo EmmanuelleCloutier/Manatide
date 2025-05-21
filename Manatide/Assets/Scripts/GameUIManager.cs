@@ -7,7 +7,7 @@ public class GameUIManager : MonoBehaviour
 {
     public static GameUIManager Instance;
 
-
+	[Header("Overlays")]
     public GameObject overlayShop;
     public GameObject overlayBiomes;
     public GameObject overlayManateeInfo;
@@ -19,6 +19,14 @@ public class GameUIManager : MonoBehaviour
 	public GameObject overlayShopCreature;
 	public GameObject overlayShopDecoration;
 
+
+	[Header("UI")]
+	public TextMeshProUGUI coinsText;
+	public TextMeshProUGUI foodText;
+	public TextMeshProUGUI BiomeText;
+	public Button btnInfo; 
+	public Button btnBiome;
+	public Button btnShop;
 
     void Awake()
     {
@@ -41,7 +49,7 @@ public class GameUIManager : MonoBehaviour
     public void OpenShopFood() => ToggleOverlay(overlayShopFood);
     public void OpenManateeInfo() => ToggleOverlay(overlayManateeInfo);
 
-    public void HideMainUI()
+   public void HideMainUI()
     {
         overlayShop.SetActive(false);
         overlayBiomes.SetActive(false);
@@ -53,6 +61,40 @@ public class GameUIManager : MonoBehaviour
         overlayShopFood.SetActive(false);
         manateeUI.SetActive(false);
     }
+
+	public void Normal()
+	{
+		HideMainUI();
+		BiomeText.gameObject.SetActive(true);
+		coinsText.gameObject.SetActive(true);
+		foodText.gameObject.SetActive(true);
+		btnInfo.gameObject.SetActive(true);
+		btnBiome.gameObject.SetActive(true);
+		btnShop.gameObject.SetActive(true);
+	}
+
+ 
+	public void HideEverything()
+	{
+		overlayShop.SetActive(false);
+        overlayBiomes.SetActive(false);
+        overlayManateeInfo.SetActive(false);
+  		overlayShopManatee.SetActive(false);
+  		overlayShopCreature.SetActive(false);
+    	overlayShopDecoration.SetActive(false);
+        overlayShopBiome.SetActive(false);
+        overlayShopFood.SetActive(false);
+        manateeUI.SetActive(false);
+
+		coinsText.gameObject.SetActive(false);
+		foodText.gameObject.SetActive(false);
+		BiomeText.gameObject.SetActive(false);
+		btnInfo.gameObject.SetActive(false);
+		btnBiome.gameObject.SetActive(false);
+		btnShop.gameObject.SetActive(false);
+	}
+
+
 
     public void MuteAudio()
     {
@@ -100,4 +142,9 @@ public class GameUIManager : MonoBehaviour
 		overlayShop.SetActive(true);
 	}
 
+	public void ShowOverlayManateeUI()
+	{ 
+		HideEverything();
+		manateeUI.SetActive(true);
+	}
 }
