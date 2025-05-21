@@ -298,6 +298,7 @@ GameObject:
   - component: {fileID: 8995424083699494080}
   - component: {fileID: 2799497562546515126}
   - component: {fileID: 7135043661824478923}
+  - component: {fileID: -7050922038444895771}
   m_Layer: 5
   m_Name: ManateeCard
   m_TagString: Untagged
@@ -410,6 +411,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &-7050922038444895771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7250938190060692682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309fc50c2112a094286651e5e8e512dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: {fileID: 4461492851945305981}
+  lvlText: {fileID: 1912666113651710870}
+  manateeSprite: {fileID: 996405971681256391}
 --- !u!1 &7332816445622303061
 GameObject:
   m_ObjectHideFlags: 0

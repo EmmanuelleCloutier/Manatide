@@ -38,28 +38,32 @@ public class ManateeInfoUI : MonoBehaviour
     }
 
     public void RefreshUI()
-    {
-        foreach (Transform child in contentParent)
-        {
-            Destroy(child.gameObject);
-        }
+	{
+    	foreach (Transform child in contentParent)
+    	{
+        	Destroy(child.gameObject);
+    	}
 
-        foreach (var manatee in manateeManager.ownedManatees)
-        {
-            // Vérifie qu'il est dans le biome courant
-            if ((int)manatee.biome != playerState.lvl)
-                continue;
+    	foreach (var manatee in manateeManager.ownedManatees)
+    	{
+        	// Vérifie qu'il est dans le biome courant
+        	if ((int)manatee.biome != playerState.lvl)
+        	    continue;
 
-            GameObject card = Instantiate(manateeCardPrefab, contentParent);
+        	GameObject card = Instantiate(manateeCardPrefab, contentParent);
+        	ManateeCardUI cardUI = card.GetComponent<ManateeCardUI>();
 
-            // Assignation des éléments visuels
-            card.transform.Find("NameText").GetComponent<TMP_Text>().text = manatee.itemName;
-            card.transform.Find("LvlText").GetComponent<TMP_Text>().text = "Lvl " + manatee.lvl;
 
-            if (spriteByType.TryGetValue(manatee.type, out Sprite sprite))
-            {
-                card.transform.Find("ManateeSprite").GetComponent<Image>().sprite = sprite;
-            }
-        }
-    }
+			cardUI.nameText.text = manatee.itemName;
+			cardUI.lvlText.text = manatee.lvl.ToString();
+
+
+				if (spriteByType.TryGetValue(manatee.type, out Sprite sprite))
+				{
+					cardUI.manateeSprite.sprite = sprite;
+				}
+			
+    	}
+	}
+
 }
