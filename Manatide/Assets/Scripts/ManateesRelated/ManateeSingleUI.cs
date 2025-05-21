@@ -11,8 +11,14 @@ public class ManateeSingleUI : MonoBehaviour
     public TextMeshProUGUI levelText;
     public Image spriteImage;
     public Button feedButton;
+    public TextMeshProUGUI feedButtonText;
+
+    [Header("Ressources")]
+    public PlayerState playerState;
 
     private ItemManatee currentManatee;
+    private const int MaxLevel = 10;
+    private const int FeedCost = 150;
 
     void Awake()
     {
@@ -23,7 +29,9 @@ public class ManateeSingleUI : MonoBehaviour
     {
         currentManatee = manatee;
         nameText.text = manatee.itemName;
-        levelText.text = "Lvl " + manatee.lvl;
+
+        UpdateLevelUI();
+
         if (sprite != null)
             spriteImage.sprite = sprite;
 
@@ -32,10 +40,49 @@ public class ManateeSingleUI : MonoBehaviour
 
     public void OnFeedButtonClicked()
     {
-        if (currentManatee != null)
+        if (currentManatee == null) return;
+
+        // Vérifie niveau max
+        if (currentManatee.lvl >= MaxLevel) return;
+
+        // Vérifie si on a assez de nourriture
+        if (playerState.food < FeedCost) return;
+
+        // Dépense et augmente le niveau
+        playerState.food -= FeedCost;
+        currentManatee.lvl += 1;
+
+        UpdateLevelUI();
+    }
+
+    private void UpdateLevelUI()
+    {
+        levelText.text = currentManatee.lvl.ToString();
+
+        if (currentManatee.lvl >= MaxLevel)
         {
-            currentManatee.lvl += 1;
-            levelText.text = "Lvl " + currentManatee.lvl;
+            feedButtonText.text = "MAX";
+            feedButton.interactable = false;
         }
+        else if (playerState.food < FeedCost)
+        {
+            feedButtonText.text = "150";
+            feedButton.interactable = false;
+        }
+        else
+        {
+            feedButtonText.text = "150";
+            feedButton.interactable = true;
+        }
+    }
+
+    void OnEnable()
+    {
+        playerState.OnFoodChanged += UpdateLevelUI;
+    }
+
+    void OnDisable()
+    {
+        playerState.OnFoodChanged -= UpdateLevelUI;
     }
 }

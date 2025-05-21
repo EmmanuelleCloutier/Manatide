@@ -16,9 +16,7 @@ public class GameUIManager : MonoBehaviour
     public GameObject overlayShopBiome;
     public GameObject overlayShopFood;
 	public GameObject overlayShopManatee;
-	public GameObject overlayShopCreature;
-	public GameObject overlayShopDecoration;
-
+	
 
 	[Header("UI")]
 	public TextMeshProUGUI coinsText;
@@ -55,8 +53,6 @@ public class GameUIManager : MonoBehaviour
         overlayBiomes.SetActive(false);
         overlayManateeInfo.SetActive(false);
   		overlayShopManatee.SetActive(false);
-  		overlayShopCreature.SetActive(false);
-    	overlayShopDecoration.SetActive(false);
         overlayShopBiome.SetActive(false);
         overlayShopFood.SetActive(false);
         manateeUI.SetActive(false);
@@ -65,9 +61,6 @@ public class GameUIManager : MonoBehaviour
 	public void Normal()
 	{
 		HideMainUI();
-		BiomeText.gameObject.SetActive(true);
-		coinsText.gameObject.SetActive(true);
-		foodText.gameObject.SetActive(true);
 		btnInfo.gameObject.SetActive(true);
 		btnBiome.gameObject.SetActive(true);
 		btnShop.gameObject.SetActive(true);
@@ -80,15 +73,9 @@ public class GameUIManager : MonoBehaviour
         overlayBiomes.SetActive(false);
         overlayManateeInfo.SetActive(false);
   		overlayShopManatee.SetActive(false);
-  		overlayShopCreature.SetActive(false);
-    	overlayShopDecoration.SetActive(false);
         overlayShopBiome.SetActive(false);
         overlayShopFood.SetActive(false);
         manateeUI.SetActive(false);
-
-		coinsText.gameObject.SetActive(false);
-		foodText.gameObject.SetActive(false);
-		BiomeText.gameObject.SetActive(false);
 		btnInfo.gameObject.SetActive(false);
 		btnBiome.gameObject.SetActive(false);
 		btnShop.gameObject.SetActive(false);
@@ -110,18 +97,6 @@ public class GameUIManager : MonoBehaviour
 	{
 		HideMainUI();
 		overlayShopManatee.SetActive(true);
-	}
-
-	public void ShowOverlayShopCreature()
-	{
-   	 	HideMainUI();
-   	 	overlayShopCreature.SetActive(true);
-	}
-
-	public void ShowOverlayShopDecoration()
-	{
-    	HideMainUI();
-    	overlayShopDecoration.SetActive(true);
 	}
 
 	public void ShowOverlayShopBiome()
