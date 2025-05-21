@@ -6,18 +6,28 @@ using System.Collections.Generic;
 
 public class BreedingUIManager : MonoBehaviour
 {
+	[Header("UI")]
     public GameObject breedingCardPrefab;
     public Transform leftParent;
     public Transform rightParent;
     public Button breedButton;
 	public TMP_Text breedingResultText;
 
+	[Header("SpawnManatee")]
+	public NameGenerator nameGenerator;
     public ManateeManager manateeManager;
     public ManateeInfoUI manateeInfoUI;
+	public Transform spawnPoint;
+
+	[Header("PrefabTypeManatee")]
+	public GameObject prefabManateeType12;
+	public GameObject prefabManateeType13;
+	public GameObject prefabManateeType23;
+	public GameObject prefabManateeType123;
+	public PlayerState playerState;
 
     private ItemManatee selectedLeft;
     private ItemManatee selectedRight;
-
     private List<ManateeBreedingCard> leftCards = new();
     private List<ManateeBreedingCard> rightCards = new();
 
@@ -88,31 +98,78 @@ public class BreedingUIManager : MonoBehaviour
         breedButton.interactable = selectedLeft != null && selectedRight != null;
     }
 
-    public void OnBreedButtonClicked()
+public void OnBreedButtonClicked()
+{
+    // Vérifie si le joueur a assez d'argent
+    if (manateeManager.playerState.coins < 250)
     {
-        int chance = CalculateBreedingChance(selectedLeft.type, selectedRight.type);
-        bool success = Random.Range(0f, 1f) <= (chance / 100f);
-
-        if (success)
-		{
-    		var newType = GetNewManateeType(selectedLeft.type, selectedRight.type);
-    		ItemManatee newManatee = new ItemManatee
-    	{
-        	itemName = "New Baby",
-        	lvl = 1,
-        	type = newType,
-        	biome = (Biome)manateeManager.playerState.lvl
-    	};
-
-    	manateeManager.AddManatee(newManatee);
-    	breedingResultText.text = "Success !";
-		}
-		else
-		{
-    		breedingResultText.text = "Fail Try again !";
-		}
-        	RefreshBreedingUI();
+        breedingResultText.text = "Pas assez d'argent ! (250$ requis)";
+        return;
     }
+
+    // Retire l'argent
+    manateeManager.playerState.SpendCoins(250);
+
+    int chance = CalculateBreedingChance(selectedLeft.type, selectedRight.type);
+    bool success = Random.Range(0f, 1f) <= (chance / 100f);
+
+    if (success)
+    {
+        var newType = GetNewManateeType(selectedLeft.type, selectedRight.type);
+        string generatedName = nameGenerator.GenerateName();
+        ItemManatee newManatee = new ItemManatee
+        {
+            itemName = generatedName,
+            lvl = 1,
+            type = newType,
+            biome = (Biome)manateeManager.playerState.lvl
+        };
+
+        GameObject prefabToSpawn = null;
+
+        switch ((int)newType)
+        {
+            case 12:
+                prefabToSpawn = prefabManateeType12;
+                break;
+            case 13:
+                prefabToSpawn = prefabManateeType13;
+                break;
+            case 23:
+                prefabToSpawn = prefabManateeType23;
+                break;
+            case 123:
+                prefabToSpawn = prefabManateeType123;
+                break;
+            default:
+                Debug.LogWarning("Type de manatee inconnu : " + newType);
+                break;
+        }
+
+        if (prefabToSpawn != null)
+        {
+            GameObject instance = Instantiate(prefabToSpawn, spawnPoint.position, Quaternion.identity);
+            manateeManager.spawnedManatees.Add(instance);
+
+            AIManatee ai = instance.GetComponent<AIManatee>();
+            if (ai != null)
+            {
+                ai.data = newManatee;
+                ai.sprite = manateeManager.GetSpriteForType(newManatee.type);
+            }
+        }
+
+        manateeManager.AddManatee(newManatee);
+        breedingResultText.text = "Success !";
+    }
+    else
+    {
+        breedingResultText.text = "Fail Try again !";
+    }
+
+    RefreshBreedingUI();
+}
+
 
     int CalculateBreedingChance(ManateeType left, ManateeType right)
     {
