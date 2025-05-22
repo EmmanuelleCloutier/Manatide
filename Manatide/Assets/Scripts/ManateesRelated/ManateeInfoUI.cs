@@ -52,16 +52,14 @@ public class ManateeInfoUI : MonoBehaviour
 
         	GameObject card = Instantiate(manateeCardPrefab, contentParent);
         	ManateeCardUI cardUI = card.GetComponent<ManateeCardUI>();
-
-
+	        
 			cardUI.nameText.text = manatee.itemName;
 			cardUI.lvlText.text = manatee.lvl.ToString();
-
-
-				if (spriteByType.TryGetValue(manatee.type, out Sprite sprite))
-				{
+			
+			if (spriteByType.TryGetValue(manatee.type, out Sprite sprite))
+			{
 					cardUI.manateeSprite.sprite = sprite;
-				}
+			}
 			
     	}
 	}

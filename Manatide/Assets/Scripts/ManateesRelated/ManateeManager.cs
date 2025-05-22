@@ -53,6 +53,40 @@ public class ManateeManager : MonoBehaviour
 
     	Debug.Log("All manatees deleted from memory and scene.");
 	}
+	
+	public void DeleteManatee(ItemManatee manateeToDelete)
+	{
+		if (ownedManatees.Contains(manateeToDelete))
+		{
+			ownedManatees.Remove(manateeToDelete);
+			GameObject toDestroy = null;
+			
+			foreach (GameObject go in spawnedManatees)
+			{
+				var ai = go.GetComponent<AIManatee>();
+				if (ai != null && ai.data == manateeToDelete)
+				{
+					toDestroy = go;
+					break;
+				}
+			}
+
+			if (toDestroy != null)
+			{
+				spawnedManatees.Remove(toDestroy);
+				Destroy(toDestroy);
+			}
+
+			SaveManatees();
+			Debug.Log("Manatee deleted: " + manateeToDelete.itemName);
+		}
+
+		// Met à jour l’UI
+		if (manateeInfoUI != null)
+		{
+			manateeInfoUI.RefreshUI();
+		}
+	}
 
 
     public void SaveManatees()
@@ -119,6 +153,7 @@ public class ManateeManager : MonoBehaviour
 		Debug.Log("Manateeadded into manateemanager");
         SaveManatees();
     }
+
 
     private GameObject GetPrefabForType(ManateeType type)
     {
