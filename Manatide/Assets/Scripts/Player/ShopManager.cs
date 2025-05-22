@@ -140,11 +140,27 @@ public class ShopManager : MonoBehaviour
 		UpdateFoodUI();
 		UpdateBiomeUI();
 		VerifBiome();
+		
+		for (int i = 3; i <= MaxLimit + 2; i++)
+		{
+			string algueName = "Algue" + i;
+			Transform algue = algueGroup.transform.Find(algueName);
+			if (algue != null)
+				algue.gameObject.SetActive(false);
+		}
+
+		// Réinitialiser le compteur
+		NbPressed = 0;
+		UpdateFoodAlgueUI();
 
 		// Supprimer sauvegarde complète
 		PlayerPrefs.DeleteKey("SavedManatees");
 		PlayerPrefs.DeleteKey("playerSave"); // si tu as une autre clé
 		PlayerPrefs.Save();
+		//remettre les bases
+		playerState.AddCoins(500);
+		playerState.AddFood(500);
+		SaveGame();
 	}
 
 	
