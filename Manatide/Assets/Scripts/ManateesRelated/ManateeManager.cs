@@ -94,7 +94,7 @@ public class ManateeManager : MonoBehaviour
         string json = JsonUtility.ToJson(new ManateeListWrapper { manatees = ownedManatees });
         PlayerPrefs.SetString("SavedManatees", json);
         PlayerPrefs.Save();
-		Debug.Log("ManateeSaved");
+		//Debug.Log("ManateeSaved");
 	
     }
 
@@ -150,7 +150,7 @@ public class ManateeManager : MonoBehaviour
     public void AddManatee(ItemManatee newManatee)
     {
         ownedManatees.Add(newManatee);
-		Debug.Log("Manateeadded into manateemanager");
+		//Debug.Log("Manateeadded into manateemanager");
         SaveManatees();
     }
 
