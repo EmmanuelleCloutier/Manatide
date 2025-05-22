@@ -71,6 +71,7 @@ public class ShopManager : MonoBehaviour
 
 	void Start()
 	{
+		LoadGame();
   		playerState.OnCoinsChanged += UpdateCoinsUI;
     	playerState.OnFoodChanged += UpdateFoodUI;
 		//Ressources
@@ -85,7 +86,79 @@ public class ShopManager : MonoBehaviour
 		//Biomes
 		VerifBiome();
 	}
+	
+//Saving or resetting the game
+	public void SaveGame()
+	{
+		SaveSystem.Save(playerState, NbPressed);
+		Debug.Log("Jeu sauvegardé !");
+	}
 
+	public void LoadGame()
+	{
+		SaveData data = SaveSystem.Load();
+		if (data != null)
+		{
+			playerState.coins = data.coins;
+			playerState.food = data.food;
+			playerState.lvl = data.lvl;
+			playerState.BiomeKelp = data.biomeKelp;
+			playerState.BiomeEpave = data.biomeEpave;
+			NbPressed = data.nbPressed;
+
+			// Rafraîchir les UI et l'état visuel
+			UpdateCoinsUI();
+			UpdateFoodUI();
+			UpdateBiomeUI();
+			VerifBiome();
+			UpdateFoodAlgueUI();
+
+			// Réactiver les algues
+			for (int i = 3; i <= NbPressed + 2; i++)  // Algue3, Algue4, etc.
+			{
+				string algueName = "Algue" + i;
+				Transform algue = algueGroup.transform.Find(algueName);
+				if (algue != null)
+					algue.gameObject.SetActive(true);
+			}
+
+			Debug.Log("Jeu chargé !");
+		}
+	}
+	
+	public void ResetGame()
+	{
+		// Reset player state (coins, food, lvl, etc.)
+		playerState.ResetPlayerState();
+
+		// Supprimer tous les manatees
+		manateeManager.DeleteAllManatees();
+
+		// Remettre à jour UI
+		manateeManager.manateeInfoUI.RefreshUI();
+		UpdateCoinsUI();
+		UpdateFoodUI();
+		UpdateBiomeUI();
+		VerifBiome();
+
+		// Supprimer sauvegarde complète
+		PlayerPrefs.DeleteKey("SavedManatees");
+		PlayerPrefs.DeleteKey("playerSave"); // si tu as une autre clé
+		PlayerPrefs.Save();
+	}
+
+	
+	public void OnNewGameButtonPressed()
+	{
+		ResetGame();
+
+		// Si tu sauvegardes la progression dans un fichier ou PlayerPrefs, n'oublie pas de supprimer la sauvegarde
+		PlayerPrefs.DeleteKey("playerSave");
+	}
+
+
+
+//Update les informations ---------------------------------------------------
 	 public void UpdateBiomeUI()
     {
         string biome = GetBiomeName(playerState.lvl);

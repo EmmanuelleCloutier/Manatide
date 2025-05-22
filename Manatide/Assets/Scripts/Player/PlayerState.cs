@@ -40,6 +40,19 @@ public class PlayerState : ScriptableObject
     	food -= amount;
     	OnFoodChanged?.Invoke();
 	}
+    
+    public void ResetPlayerState()
+    {
+        coins = 0;
+        food = 0;
+        lvl = 1;               // ou la valeur de départ de ton jeu
+        BiomeKelp = false;
+        BiomeEpave = false;
+
+        OnCoinsChanged?.Invoke();
+        OnFoodChanged?.Invoke();
+    }
+
 
 
 }
