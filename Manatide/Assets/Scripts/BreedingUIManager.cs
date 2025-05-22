@@ -46,12 +46,10 @@ public class BreedingUIManager : MonoBehaviour
             {
                 Sprite sprite = manateeManager.GetSpriteForType(manatee.type);
 
-                // LEFT
                 var leftCard = Instantiate(breedingCardPrefab, leftParent).GetComponent<ManateeBreedingCard>();
                 leftCard.Setup(manatee, sprite, OnLeftManateeSelected);
                 leftCards.Add(leftCard);
 
-                // RIGHT
                 var rightCard = Instantiate(breedingCardPrefab, rightParent).GetComponent<ManateeBreedingCard>();
                 rightCard.Setup(manatee, sprite, OnRightManateeSelected);
                 rightCards.Add(rightCard);
@@ -81,6 +79,7 @@ public class BreedingUIManager : MonoBehaviour
     void OnRightManateeSelected(ItemManatee manatee)
     {
         selectedRight = manatee;
+		UpdateLeftColumnInteractability();
         UpdateBreedButton();
     }
 
@@ -93,6 +92,15 @@ public class BreedingUIManager : MonoBehaviour
         }
     }
 
+	void UpdateLeftColumnInteractability()
+    {
+        foreach (var card in leftCards)
+        {
+            bool isSame = selectedRight != null && card.GetManateeData() == selectedRight;
+            card.SetInteractable(!isSame);
+        }
+    }
+
     void UpdateBreedButton()
     {
         breedButton.interactable = selectedLeft != null && selectedRight != null;
@@ -100,14 +108,11 @@ public class BreedingUIManager : MonoBehaviour
 
 public void OnBreedButtonClicked()
 {
-    // Vérifie si le joueur a assez d'argent
     if (manateeManager.playerState.coins < 250)
     {
         breedingResultText.text = "Pas assez d'argent ! (250$ requis)";
         return;
     }
-
-    // Retire l'argent
     manateeManager.playerState.SpendCoins(250);
 
     int chance = CalculateBreedingChance(selectedLeft.type, selectedRight.type);
@@ -181,7 +186,6 @@ public void OnBreedButtonClicked()
 
     ManateeType GetNewManateeType(ManateeType left, ManateeType right)
     {
-        // Combine les chiffres et trie-les pour éviter des doublons incohérents
         string combined = ((int)left).ToString() + ((int)right).ToString();
         var uniqueDigits = new HashSet<char>(combined);
         var sorted = new List<char>(uniqueDigits);
