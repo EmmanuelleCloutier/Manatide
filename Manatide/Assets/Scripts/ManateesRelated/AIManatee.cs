@@ -59,7 +59,7 @@ public class AIManatee : MonoBehaviour
             timer = 0f;
         }
     }
-
+//
     void PickNewDestination()
     {
         Camera cam = Camera.main;
