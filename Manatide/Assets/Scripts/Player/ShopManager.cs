@@ -90,6 +90,7 @@ public class ShopManager : MonoBehaviour
 //Saving or resetting the game
 	public void SaveGame()
 	{
+		manateeManager.SaveManatees();
 		SaveSystem.Save(playerState, NbPressed);
 		Debug.Log("Jeu sauvegardé !");
 	}

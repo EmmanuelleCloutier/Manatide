@@ -7,6 +7,7 @@ public class GameUIManager : MonoBehaviour
 {
     public static GameUIManager Instance;
 
+
 	[Header("Overlays")]
     public GameObject overlayShop;
     public GameObject overlayBiomes;

@@ -57,11 +57,15 @@ public class ManateeInfoUI : MonoBehaviour
     		cardUI.nameText.text = manatee.itemName;
     		cardUI.lvlText.text = manatee.lvl.ToString();
 		
-			/*
-    		if (spriteByType.TryGetValue(manatee.type, out Sprite sprite))
-    		{
-        		cardUI.manateeSprite.sprite = sprite;
-    		}*/
+			if (spriteByType.TryGetValue(manatee.type, out Sprite sprite))
+{
+	cardUI.manateeSprite.sprite = sprite;
+}
+else
+{
+	Debug.LogWarning("Sprite non trouvé pour le type : " + manatee.type);
+}
+
 		}	
 	}
 }
