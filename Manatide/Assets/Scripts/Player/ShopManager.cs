@@ -141,7 +141,7 @@ public class ShopManager : MonoBehaviour
 		UpdateFoodUI();
 		UpdateBiomeUI();
 		VerifBiome();
-		
+    
 		for (int i = 3; i <= MaxLimit + 2; i++)
 		{
 			string algueName = "Algue" + i;
@@ -156,13 +156,19 @@ public class ShopManager : MonoBehaviour
 
 		// Supprimer sauvegarde complète
 		PlayerPrefs.DeleteKey("SavedManatees");
-		PlayerPrefs.DeleteKey("playerSave"); // si tu as une autre clé
+		PlayerPrefs.DeleteKey("playerSave");
 		PlayerPrefs.Save();
-		//remettre les bases
+
+		// remettre les ressources de base
 		playerState.AddCoins(500);
 		playerState.AddFood(500);
+
+		// Sauvegarder immédiatement pour recréer les fichiers
 		SaveGame();
+		
+		manateeManager.LoadManatees();
 	}
+
 
 	
 	public void OnNewGameButtonPressed()

@@ -13325,19 +13325,19 @@ PrefabInstance:
     - target: {fileID: 3626696820554831002, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
       propertyPath: prefabManateeType12
       value: 
-      objectReference: {fileID: 9083392849169492859, guid: 51c47dc09b9825c4cb6c0f86ab9688c9, type: 3}
+      objectReference: {fileID: 9083392849169492859, guid: 65d67d2702379734e8f4e52da5d6bffe, type: 3}
     - target: {fileID: 3626696820554831002, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
       propertyPath: prefabManateeType13
       value: 
-      objectReference: {fileID: 7547074259041090538, guid: e89f879601eb1e1489b42d1d479fbf98, type: 3}
+      objectReference: {fileID: 7547074259041090538, guid: 959e4f6aed3e85648a11840d41cb0ff4, type: 3}
     - target: {fileID: 3626696820554831002, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
       propertyPath: prefabManateeType23
       value: 
-      objectReference: {fileID: 463901068361450839, guid: 16390d7be1586d049943db55004ebaa7, type: 3}
+      objectReference: {fileID: 463901068361450839, guid: 5c2aeb7d5ae532d44860550cc51188e3, type: 3}
     - target: {fileID: 3626696820554831002, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
       propertyPath: prefabManateeType123
       value: 
-      objectReference: {fileID: 3396228640903903102, guid: f1f58474c9a505f4d94ae34cec35aeef, type: 3}
+      objectReference: {fileID: 3396228640903903102, guid: 3595e915ab5e0eb4b9de3b534a59b1e1, type: 3}
     - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
       propertyPath: manateeManager
       value: 
@@ -13346,6 +13346,34 @@ PrefabInstance:
       propertyPath: manateeCardPrefab
       value: 
       objectReference: {fileID: 7250938190060692682, guid: ec6efafbdd0d6aa4ebb81f1284485212, type: 3}
+    - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: spriteByTypeList.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 5235321499061723878, guid: 1b20a4cc1e6cfe649b30142dc9d277ef, type: 3}
+    - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: spriteByTypeList.Array.data[1].sprite
+      value: 
+      objectReference: {fileID: 5777675318904165673, guid: fbbd973f54c967747bc08fa3ca156b01, type: 3}
+    - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: spriteByTypeList.Array.data[2].sprite
+      value: 
+      objectReference: {fileID: -7687219920802530846, guid: 3bedd3c5adae4dd45b41ae414eb7a0f5, type: 3}
+    - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: spriteByTypeList.Array.data[3].sprite
+      value: 
+      objectReference: {fileID: 3298308381740601934, guid: 3c26b206f1c284b4c8c9f93270e631e3, type: 3}
+    - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: spriteByTypeList.Array.data[4].sprite
+      value: 
+      objectReference: {fileID: -7624796473339272443, guid: 6cab7f234d3ee0a4baa5953d2176a079, type: 3}
+    - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: spriteByTypeList.Array.data[5].sprite
+      value: 
+      objectReference: {fileID: -3933368182094344625, guid: 980826ba3961e0d40a228da9da5ca4da, type: 3}
+    - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: spriteByTypeList.Array.data[6].sprite
+      value: 
+      objectReference: {fileID: -484400806558541540, guid: 4786e11f73afb864a85dbca0e4d4797a, type: 3}
     - target: {fileID: 3842166168431540395, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
       propertyPath: m_Color.a
       value: 0
