@@ -298,7 +298,8 @@ public void BuyManateeType1()
             itemName = generatedName,
             lvl = 1,
             type = ManateeType.Type1,
-            biome = Biome.Langune
+            biome = (Biome)playerState.lvl
+
         };
 
      
@@ -333,7 +334,8 @@ public void BuyManateeType2()
             itemName = generatedName,
             lvl = 1,
             type = ManateeType.Type2,
-            biome = Biome.Langune
+            biome = (Biome)playerState.lvl
+
         };
 
         GameObject instance = Instantiate(prefabManateeType2, spawnPoint.position, Quaternion.identity);
@@ -366,7 +368,8 @@ public void BuyManateeType3()
             itemName = generatedName,
             lvl = 1,
             type = ManateeType.Type3,
-            biome = Biome.Langune
+            biome = (Biome)playerState.lvl
+
         };
 
         GameObject instance = Instantiate(prefabManateeType3, spawnPoint.position, Quaternion.identity);

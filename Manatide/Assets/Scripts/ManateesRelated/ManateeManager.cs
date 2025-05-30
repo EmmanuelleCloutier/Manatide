@@ -100,41 +100,41 @@ public class ManateeManager : MonoBehaviour
 
     public void LoadManatees()
     {
-        if (!PlayerPrefs.HasKey("SavedManatees"))
-            return;
+	    if (!PlayerPrefs.HasKey("SavedManatees"))
+		    return;
 
-        string json = PlayerPrefs.GetString("SavedManatees");
-        ManateeListWrapper wrapper = JsonUtility.FromJson<ManateeListWrapper>(json);
-        ownedManatees = wrapper.manatees;
+	    string json = PlayerPrefs.GetString("SavedManatees");
+	    ManateeListWrapper wrapper = JsonUtility.FromJson<ManateeListWrapper>(json);
+	    ownedManatees = wrapper.manatees;
 
-        foreach (var manatee in ownedManatees)
-        {
-            // Ne charge que les manatees du biome actuel
-            if ((int)manatee.biome == playerState.lvl)
-            {
-                GameObject prefab = GetPrefabForType(manatee.type);
-                if (prefab != null)
-                {
-                    GameObject instance = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
-					spawnedManatees.Add(instance);
-					
-					AIManatee ai = instance.GetComponent<AIManatee>();
-					if (ai != null)
-					{
-						ai.data = manatee;
+	    foreach (var manatee in ownedManatees)
+	    {
+		    GameObject prefab = GetPrefabForType(manatee.type);
+		    if (prefab != null)
+		    {
+			    // ❗️On n’instantie que si c’est le biome actuel
+			    if ((int)manatee.biome == playerState.lvl)
+			    {
+				    GameObject instance = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
+				    spawnedManatees.Add(instance);
 
-						// Récupère le bon sprite à partir du type
-						Sprite sprite = GetSpriteForType(manatee.type);
-						ai.sprite = sprite;
-					}
+				    AIManatee ai = instance.GetComponent<AIManatee>();
+				    if (ai != null)
+				    {
+					    ai.data = manatee;
 
-                }
-				else {
-						Debug.LogWarning($"Prefab is null for type: {manatee.type}");
-				}
-            }
-        }
+					    Sprite sprite = GetSpriteForType(manatee.type);
+					    ai.sprite = sprite;
+				    }
+			    }
+		    }
+		    else
+		    {
+			    Debug.LogWarning($"Prefab is null for type: {manatee.type}");
+		    }
+	    }
     }
+
     
    public Sprite GetSpriteForType(ManateeType type)
 	{

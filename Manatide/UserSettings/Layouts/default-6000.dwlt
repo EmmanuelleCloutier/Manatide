@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Game
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -326,7 +326,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/LVL_Epave/Prefab
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -336,16 +336,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/LVL_Epave/Prefab
   m_LastFoldersGridSize: 64
   m_LastProjectPath: C:\Users\emman\Documents\GitHub\Manatide\Manatide
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 185}
-    m_SelectedIDs: 9abd0000
-    m_LastClickedID: 48538
-    m_ExpandedIDs: 0000000022bd000024bd000026bd00009cbd000000ca9a3b
+    m_SelectedIDs: aed80000
+    m_LastClickedID: 55470
+    m_ExpandedIDs: 00000000bcbd0000bebd0000c0bd0000c2bd00002ebe000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -374,7 +374,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000022bd000024bd000026bd0000
+    m_ExpandedIDs: 00000000bcbd0000bebd0000c0bd0000c2bd0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -520,9 +520,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 884dffffbc7affffc088ffffccfaffff0efbffff
+      m_SelectedIDs: 06f6ffff
+      m_LastClickedID: -2554
+      m_ExpandedIDs: 0cfbffff0efbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 

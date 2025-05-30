@@ -13485,15 +13485,15 @@ PrefabInstance:
     - target: {fileID: 5837780782104802077, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
       propertyPath: prefabManateeType1
       value: 
-      objectReference: {fileID: 6991527556628755838, guid: 216bbf5344cd9f44fb45a17e377526bc, type: 3}
+      objectReference: {fileID: 6991527556628755838, guid: 16a1f5d40e163b64398cb3ea889fdb96, type: 3}
     - target: {fileID: 5837780782104802077, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
       propertyPath: prefabManateeType2
       value: 
-      objectReference: {fileID: 4769219138305956075, guid: 17f3203bf8e366d4d977fd4a6184f196, type: 3}
+      objectReference: {fileID: 4769219138305956075, guid: 75ad09666cc643349b669aca254b5cc6, type: 3}
     - target: {fileID: 5837780782104802077, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
       propertyPath: prefabManateeType3
       value: 
-      objectReference: {fileID: 7268472527052547354, guid: 252b4393641323e42afb50b6b0eed1f8, type: 3}
+      objectReference: {fileID: 7268472527052547354, guid: bd8fa1580a2ce9f409f8c5ef10734a0f, type: 3}
     - target: {fileID: 5845935889032750562, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
       propertyPath: manateeManager
       value: 
