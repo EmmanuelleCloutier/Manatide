@@ -326,7 +326,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/LVL_Epave/Prefab
+    - Assets/LVL_Epave/Sprite
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -336,16 +336,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/LVL_Epave/Prefab
+  - Assets/LVL_Epave/Sprite
   m_LastFoldersGridSize: 64
   m_LastProjectPath: C:\Users\emman\Documents\GitHub\Manatide\Manatide
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 185}
-    m_SelectedIDs: 20be0000
-    m_LastClickedID: 48672
-    m_ExpandedIDs: 00000000acbd0000aebd0000b0bd0000b2bd0000b4bd000000ca9a3b
+    m_SelectedIDs: f2bd0000
+    m_LastClickedID: 48626
+    m_ExpandedIDs: 000000007cbd00007ebd000080bd000082bd000084bd000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -374,7 +374,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000acbd0000aebd0000b0bd0000b2bd0000b4bd0000
+    m_ExpandedIDs: 000000007cbd00007ebd000080bd000082bd000084bd0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -522,7 +522,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 8abeffff90beffffa0c7ffffe2c7ffffd8cdffff7af9ffff0efbffff
+      m_ExpandedIDs: d8f1ffff0efbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1128,7 +1128,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: 971.5976, y: 470.40186, z: 2.7429729}
     speed: 2
-    m_Value: {x: 972.8005, y: 471.02945, z: 3.0484111}
+    m_Value: {x: 971.5976, y: 470.40186, z: 2.7429729}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1180,7 +1180,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 709.289
     speed: 2
-    m_Value: 678.7455
+    m_Value: 709.289
   m_Ortho:
     m_Target: 1
     speed: 2
