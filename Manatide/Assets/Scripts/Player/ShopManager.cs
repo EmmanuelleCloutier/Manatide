@@ -2,6 +2,8 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System.Collections;
+
 
 public class ShopManager : MonoBehaviour
 {
@@ -277,6 +279,20 @@ public class ShopManager : MonoBehaviour
     }
 
 //Manatee ----------------------------------------------------------------
+private IEnumerator DelayedRefreshUI()
+{
+    yield return null; // attendre une frame pour laisser Unity finir d'instancier et de mettre à jour
+
+    if (manateeManager != null && manateeManager.manateeInfoUI != null)
+    {
+        manateeManager.manateeInfoUI.RefreshUI();
+    }
+    else
+    {
+        Debug.LogWarning("manateeManager ou manateeInfoUI est null.");
+    }
+}
+
 public void BuyManateeType1()
 {
     if (playerState.coins >= PriceM1)
@@ -306,7 +322,7 @@ public void BuyManateeType1()
             ai.sprite = manateeManager.GetSpriteForType(newManatee.type);
         }
 
-        manateeManager.manateeInfoUI.RefreshUI();
+        StartCoroutine(DelayedRefreshUI());
         UpdateCoinsUI();
 
         playerState.coins -= PriceM1;
@@ -340,7 +356,7 @@ public void BuyManateeType2()
             ai.sprite = manateeManager.GetSpriteForType(newManatee.type);
         }
 
-        manateeManager.manateeInfoUI.RefreshUI();
+       StartCoroutine(DelayedRefreshUI());
         UpdateCoinsUI();
 
         playerState.coins -= PriceM2;
@@ -374,7 +390,7 @@ public void BuyManateeType3()
             ai.sprite = manateeManager.GetSpriteForType(newManatee.type);
         }
 
-        manateeManager.manateeInfoUI.RefreshUI();
+       StartCoroutine(DelayedRefreshUI());
         UpdateCoinsUI();
 
         playerState.coins -= PriceM3;

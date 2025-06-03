@@ -13129,7 +13129,7 @@ PrefabInstance:
     - target: {fileID: 5106351573213067196, guid: 5bbf7d20588981843bc96f0d907c2b25, type: 3}
       propertyPath: prefabType2
       value: 
-      objectReference: {fileID: 4769219138305956075, guid: 17f3203bf8e366d4d977fd4a6184f196, type: 3}
+      objectReference: {fileID: 4769219138305956075, guid: 75ad09666cc643349b669aca254b5cc6, type: 3}
     - target: {fileID: 5106351573213067196, guid: 5bbf7d20588981843bc96f0d907c2b25, type: 3}
       propertyPath: prefabType3
       value: 
@@ -13366,6 +13366,34 @@ PrefabInstance:
       propertyPath: prefabManateeType123
       value: 
       objectReference: {fileID: 3396228640903903102, guid: 81818e7dc3dc23a4eaa59b3c508fe075, type: 3}
+    - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: Type1
+      value: 
+      objectReference: {fileID: 5235321499061723878, guid: 9f0483fca3e143049b11ad13e5d0d802, type: 3}
+    - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: Type2
+      value: 
+      objectReference: {fileID: 5777675318904165673, guid: 05bf8e3eb4312b64fa67159b69dd507d, type: 3}
+    - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: Type3
+      value: 
+      objectReference: {fileID: -7687219920802530846, guid: 788f47580a2c27c4fa8d38c8275ce795, type: 3}
+    - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: Type12
+      value: 
+      objectReference: {fileID: 3298308381740601934, guid: 207a81d7b6ad9b2489d4508dc174e24b, type: 3}
+    - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: Type13
+      value: 
+      objectReference: {fileID: -7624796473339272443, guid: 2ad0c0218984fab4c943b1ad95bc63ff, type: 3}
+    - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: Type23
+      value: 
+      objectReference: {fileID: -3933368182094344625, guid: c32784050517095478e8ec9ff1d5f8c3, type: 3}
+    - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: Type123
+      value: 
+      objectReference: {fileID: -484400806558541540, guid: 56c55a6b4e5aff64e96026829d61edf3, type: 3}
     - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
       propertyPath: manateeManager
       value: 

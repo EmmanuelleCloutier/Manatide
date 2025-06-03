@@ -18687,6 +18687,34 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3396228640903903102, guid: f1f58474c9a505f4d94ae34cec35aeef, type: 3}
     - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: Type1
+      value: 
+      objectReference: {fileID: 5235321499061723878, guid: b816e9e76707b7e4980b295b50bd86ba, type: 3}
+    - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: Type2
+      value: 
+      objectReference: {fileID: 5777675318904165673, guid: 5ffd668092fa353459349c8378765a2e, type: 3}
+    - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: Type3
+      value: 
+      objectReference: {fileID: -7687219920802530846, guid: 3ef3a75ecf0568a4a9be93922541dc0d, type: 3}
+    - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: Type12
+      value: 
+      objectReference: {fileID: 3298308381740601934, guid: 3d6c717d3d630b64b9f3b68385687335, type: 3}
+    - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: Type13
+      value: 
+      objectReference: {fileID: -7624796473339272443, guid: 54b2238c0c1db674e9205c83ec378e5d, type: 3}
+    - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: Type23
+      value: 
+      objectReference: {fileID: -3933368182094344625, guid: b723d86e47c20ae419a3c0b259fe5538, type: 3}
+    - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: Type123
+      value: 
+      objectReference: {fileID: -484400806558541540, guid: 73d073c3e0f1f2b47a5a06fc18081d23, type: 3}
+    - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
       propertyPath: manateeManager
       value: 
       objectReference: {fileID: 3238154658792052242}

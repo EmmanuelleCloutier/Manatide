@@ -18,10 +18,18 @@ public class ManateeInfoUI : MonoBehaviour
     public ManateeManager manateeManager; // Ton ManateeManager
     public PlayerState playerState; // Pour le biome actuel
 
-    [Header("Sprites selon le type")]
+    [Header("Sprites selon le type pour manateemanager")]
     public List<ManateeTypeSpritePair> spriteByTypeList;
-
     private Dictionary<ManateeType, Sprite> spriteByType;
+
+	[Header("Sprites")]
+	 public Sprite Type1;
+ 	public Sprite Type2;
+ 	public Sprite Type3;
+ 	public Sprite Type12;
+ 	public Sprite Type13;
+ 	public Sprite Type23;
+ 	public Sprite Type123;
 
     void Awake()
     {
@@ -56,15 +64,36 @@ public class ManateeInfoUI : MonoBehaviour
 		
     		cardUI.nameText.text = manatee.itemName;
     		cardUI.lvlText.text = manatee.lvl.ToString();
-		
-			/*if (spriteByType.TryGetValue(manatee.type, out Sprite sprite))
-{
-	cardUI.manateeSprite.sprite = sprite;
-}
-else
-{
-	Debug.LogWarning("Sprite non trouvé pour le type : " + manatee.type);
-}*/
+		    
+			     switch (manatee.type)
+        {
+            case ManateeType.Type1:
+                cardUI.manateeSprite.sprite = Type1;
+                break;
+            case ManateeType.Type2:
+                cardUI.manateeSprite.sprite = Type2;
+                break;
+            case ManateeType.Type3:
+                cardUI.manateeSprite.sprite = Type3;
+                break;
+            case ManateeType.Type12:
+                cardUI.manateeSprite.sprite = Type12;
+                break;
+            case ManateeType.Type13:
+                cardUI.manateeSprite.sprite = Type13;
+                break;
+            case ManateeType.Type23:
+                cardUI.manateeSprite.sprite = Type23;
+                break;
+            case ManateeType.Type123:
+                cardUI.manateeSprite.sprite = Type123;
+                break;
+            default:
+                // Optionnel : sprite par défaut ou vide
+                cardUI.manateeSprite.sprite = null;
+                break;
+        }
+
 
 		}	
 	}

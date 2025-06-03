@@ -105,6 +105,17 @@ public class BreedingUIManager : MonoBehaviour
     {
         breedButton.interactable = selectedLeft != null && selectedRight != null;
     }
+    private IEnumerator DelayedBreedingUIRefresh()
+    {
+        yield return null; // attendre une frame (évite les race conditions)
+
+        if (manateeInfoUI != null)
+        {
+            manateeInfoUI.RefreshUI(); // évite les crashs liés à une liste pas encore prête
+        }
+
+        RefreshBreedingUI(); // met à jour la liste de breeding
+    }
 
 public void OnBreedButtonClicked()
 {
@@ -164,7 +175,8 @@ public void OnBreedButtonClicked()
             }
         }
 
-        manateeManager.AddManatee(newManatee);
+        StartCoroutine(DelayedBreedingUIRefresh());
+
         breedingResultText.text = "Success !";
     }
     else
