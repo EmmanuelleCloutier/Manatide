@@ -36,28 +36,32 @@ public class BreedingUIManager : MonoBehaviour
         RefreshBreedingUI();
     }
 
-    void RefreshBreedingUI()
+   void RefreshBreedingUI()
+{
+    ClearCards();
+
+    // On récupère le biome actuel du joueur
+    Biome currentBiome = (Biome)playerState.lvl;
+
+    foreach (var manatee in manateeManager.ownedManatees)
     {
-        ClearCards();
-
-        foreach (var manatee in manateeManager.ownedManatees)
+        // On garde uniquement les manatees du biome actif ET niveau 5+
+        if (manatee.lvl >= 5 && manatee.biome == currentBiome)
         {
-            if (manatee.lvl >= 5)
-            {
-                Sprite sprite = manateeManager.GetSpriteForType(manatee.type);
+            Sprite sprite = manateeManager.GetSpriteForType(manatee.type);
 
-                var leftCard = Instantiate(breedingCardPrefab, leftParent).GetComponent<ManateeBreedingCard>();
-                leftCard.Setup(manatee, sprite, OnLeftManateeSelected);
-                leftCards.Add(leftCard);
+            var leftCard = Instantiate(breedingCardPrefab, leftParent).GetComponent<ManateeBreedingCard>();
+            leftCard.Setup(manatee, sprite, OnLeftManateeSelected);
+            leftCards.Add(leftCard);
 
-                var rightCard = Instantiate(breedingCardPrefab, rightParent).GetComponent<ManateeBreedingCard>();
-                rightCard.Setup(manatee, sprite, OnRightManateeSelected);
-                rightCards.Add(rightCard);
-            }
+            var rightCard = Instantiate(breedingCardPrefab, rightParent).GetComponent<ManateeBreedingCard>();
+            rightCard.Setup(manatee, sprite, OnRightManateeSelected);
+            rightCards.Add(rightCard);
         }
-
-        UpdateBreedButton();
     }
+
+    UpdateBreedButton();
+}
 
     void ClearCards()
     {

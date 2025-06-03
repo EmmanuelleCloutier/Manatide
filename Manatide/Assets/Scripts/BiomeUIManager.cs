@@ -54,7 +54,7 @@ public class BiomeUIManager : MonoBehaviour
 
     void SaveAndLoadBiome(string sceneName)
     {
-        shopManager.SaveGame(); // sauvegarde tout
+        shopManager.SaveGame(); 
         SceneManager.LoadScene(sceneName);
     }
 }
