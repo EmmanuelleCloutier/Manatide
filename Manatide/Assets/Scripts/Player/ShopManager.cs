@@ -66,7 +66,10 @@ public class ShopManager : MonoBehaviour
 	public int FoodPack4;
 
 	[Header("Algues")]
-	public GameObject algueGroup;
+	public GameObject algue1;
+	public GameObject algue2;
+	public GameObject algue3;
+
 
 
 	void Start()
@@ -114,14 +117,7 @@ public class ShopManager : MonoBehaviour
 			VerifBiome();
 			UpdateFoodAlgueUI();
 
-			// Réactiver les algues
-			for (int i = 3; i <= NbPressed + 2; i++)  // Algue3, Algue4, etc.
-			{
-				string algueName = "Algue" + i;
-				Transform algue = algueGroup.transform.Find(algueName);
-				if (algue != null)
-					algue.gameObject.SetActive(true);
-			}
+			UpdatePlantesVisibility();
 
 			Debug.Log("Jeu chargé !");
 		}
@@ -142,13 +138,7 @@ public class ShopManager : MonoBehaviour
 		UpdateBiomeUI();
 		VerifBiome();
     
-		for (int i = 3; i <= MaxLimit + 2; i++)
-		{
-			string algueName = "Algue" + i;
-			Transform algue = algueGroup.transform.Find(algueName);
-			if (algue != null)
-				algue.gameObject.SetActive(false);
-		}
+		UpdatePlantesVisibility();
 
 		// Réinitialiser le compteur
 		NbPressed = 0;
@@ -160,8 +150,8 @@ public class ShopManager : MonoBehaviour
 		PlayerPrefs.Save();
 
 		// remettre les ressources de base
-		playerState.AddCoins(500);
-		playerState.AddFood(500);
+		playerState.AddCoins(15000);
+		playerState.AddFood(15000);
 
 		// Sauvegarder immédiatement pour recréer les fichiers
 		SaveGame();
@@ -399,37 +389,81 @@ public void BuyManateeType3()
 		LimitText.text = NbPressed + "/3";
 	}
 
-	public void BuyFoodAlguee()
+  public void UpdatePlantesVisibility()
+{
+	NbPressed = 0;
+	algue1.SetActive(false);
+	algue2.SetActive(false);
+	algue3.SetActive(false);
+
+	switch (playerState.lvl)
 	{
-		if (NbPressed <= MaxLimit)
-		{
-			if (playerState.coins >= PriceFood)
-			{
-				playerState.coins -= PriceFood;
-				NbPressed++;
-				UpdateCoinsUI();
-				UpdateFoodAlgueUI();
+		case 1:
+			if (playerState.PlanteL1) { algue1.SetActive(true); NbPressed++; }
+			if (playerState.PlanteL2) { algue2.SetActive(true); NbPressed++; }
+			if (playerState.PlanteL3) { algue3.SetActive(true); NbPressed++; }
+			break;
+		case 2:
+			if (playerState.PlanteK1) { algue1.SetActive(true); NbPressed++; }
+			if (playerState.PlanteK2) { algue2.SetActive(true); NbPressed++; }
+			if (playerState.PlanteK3) { algue3.SetActive(true); NbPressed++; }
+			break;
+		case 3:
+			if (playerState.PlanteE1) { algue1.SetActive(true); NbPressed++; }
+			if (playerState.PlanteE2) { algue2.SetActive(true); NbPressed++; }
+			if (playerState.PlanteE3) { algue3.SetActive(true); NbPressed++; }
+			break;
+	}
 
-				// Activer l'algue correspondante à NbPressed
-				string algueName = "Algue" + (NbPressed + 2); // car Algue1 et Algue2 sont déjà actives
-				Transform algue = algueGroup.transform.Find(algueName);
+	UpdateFoodAlgueUI();
 
-				if (algue != null)
-				{
-					algue.gameObject.SetActive(true);
-				}
-				else
-				{
-					Debug.LogWarning($"Algue '{algueName}' introuvable dans {algueGroup.name}");
-				}
-			}
-		}
-		else
+	// UI si toutes les plantes sont achetées
+	if (NbPressed == 3)
+	{
+		FoodText.gameObject.SetActive(true);
+		PriceText.gameObject.SetActive(false);
+		LimitText.gameObject.SetActive(false);
+	}
+}
+
+    
+
+
+
+public void BuyFoodAlguee()
+{
+    if (playerState.coins >= PriceFood)
+    {
+        playerState.coins -= PriceFood;
+
+        switch (playerState.lvl)
+        {
+            case 1: // Lagoon
+                if (!playerState.PlanteL1) playerState.PlanteL1 = true;
+                else if (!playerState.PlanteL2) playerState.PlanteL2 = true;
+                else if (!playerState.PlanteL3) playerState.PlanteL3 = true;
+                break;
+            case 2: // Kelp
+                if (!playerState.PlanteK1) playerState.PlanteK1 = true;
+                else if (!playerState.PlanteK2) playerState.PlanteK2 = true;
+                else if (!playerState.PlanteK3) playerState.PlanteK3 = true;
+                break;
+            case 3: // Epave
+                if (!playerState.PlanteE1) playerState.PlanteE1 = true;
+                else if (!playerState.PlanteE2) playerState.PlanteE2 = true;
+                else if (!playerState.PlanteE3) playerState.PlanteE3 = true;
+                break;
+        }
+
+        UpdateCoinsUI();
+        UpdatePlantesVisibility();
+		if (algue3.activeSelf)
 		{
 			FoodText.gameObject.SetActive(true);
 			PriceText.gameObject.SetActive(false);
 			LimitText.gameObject.SetActive(false);
 		}
+	}
 }
 
 	public void BuyPack1()

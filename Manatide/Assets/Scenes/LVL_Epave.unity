@@ -13523,6 +13523,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5837780782104802077, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: algue1
+      value: 
+      objectReference: {fileID: 744769359}
+    - target: {fileID: 5837780782104802077, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: algue2
+      value: 
+      objectReference: {fileID: 2125025948}
+    - target: {fileID: 5837780782104802077, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: algue3
+      value: 
+      objectReference: {fileID: 478509444}
+    - target: {fileID: 5837780782104802077, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
       propertyPath: algueGroup
       value: 
       objectReference: {fileID: 2091841733}

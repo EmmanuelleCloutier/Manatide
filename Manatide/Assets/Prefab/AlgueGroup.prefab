@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 7782883049296734034}
   - component: {fileID: 6375422934858195143}
   m_Layer: 0
-  m_Name: Algue5
+  m_Name: AlgueD3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -341,7 +341,7 @@ GameObject:
   - component: {fileID: 4746196057342028545}
   - component: {fileID: 7424007028775197831}
   m_Layer: 0
-  m_Name: Algue1
+  m_Name: AlgueS1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -448,10 +448,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a6cf51aa9414e74cb688e009fbf7441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  algues: []
   foodCoinPrefab: {fileID: 6252752130863341971, guid: bf1e2c1beee68804492c26bfc9c0ee92, type: 3}
-  playerState: {fileID: 11400000, guid: 1539bc16371822340868bc95d668a50e, type: 2}
   spawnInterval: 10
+  playerState: {fileID: 11400000, guid: 1539bc16371822340868bc95d668a50e, type: 2}
 --- !u!1 &5100374074360446022
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,7 +462,7 @@ GameObject:
   - component: {fileID: 5300144161216834004}
   - component: {fileID: 289202351824644239}
   m_Layer: 0
-  m_Name: Algue2
+  m_Name: AlgueS2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -619,7 +618,7 @@ GameObject:
   - component: {fileID: 1704787157395336148}
   - component: {fileID: 8569853029676870943}
   m_Layer: 0
-  m_Name: Algue4
+  m_Name: AlgueD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -688,7 +687,7 @@ GameObject:
   - component: {fileID: 1720617665799488926}
   - component: {fileID: 551919130002061443}
   m_Layer: 0
-  m_Name: Algue3
+  m_Name: AlgueD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

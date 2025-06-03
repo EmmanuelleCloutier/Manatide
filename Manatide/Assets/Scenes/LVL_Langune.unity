@@ -18276,6 +18276,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2269031792920373577, guid: c98f558a9e22e8841ab631fc5fd22ec2, type: 3}
+      propertyPath: m_Name
+      value: Algue1
+      objectReference: {fileID: 0}
     - target: {fileID: 3737656447028990669, guid: c98f558a9e22e8841ab631fc5fd22ec2, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -18810,6 +18814,18 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5837780782104802077, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: algue1
+      value: 
+      objectReference: {fileID: 744769359}
+    - target: {fileID: 5837780782104802077, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: algue2
+      value: 
+      objectReference: {fileID: 2125025948}
+    - target: {fileID: 5837780782104802077, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: algue3
+      value: 
+      objectReference: {fileID: 478509444}
     - target: {fileID: 5837780782104802077, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
       propertyPath: algueGroup
       value: 
