@@ -140,7 +140,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Epave
+  m_text: Shipwreck
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c150b98d70acf7e4eb0ae9f44eeb7c93, type: 2}
   m_sharedMaterial: {fileID: -2717766744735201409, guid: c150b98d70acf7e4eb0ae9f44eeb7c93, type: 2}
@@ -412,7 +412,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pack 4
+  m_text: 2000 food
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c150b98d70acf7e4eb0ae9f44eeb7c93, type: 2}
   m_sharedMaterial: {fileID: -2717766744735201409, guid: c150b98d70acf7e4eb0ae9f44eeb7c93, type: 2}
@@ -439,8 +439,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 47
+  m_fontSizeBase: 47
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -477,7 +477,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -20.49414, y: 0, z: -20.49414, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2364,7 +2364,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Langune
+  m_text: Lagoon
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c150b98d70acf7e4eb0ae9f44eeb7c93, type: 2}
   m_sharedMaterial: {fileID: -2717766744735201409, guid: c150b98d70acf7e4eb0ae9f44eeb7c93, type: 2}
@@ -2500,7 +2500,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pack 1
+  m_text: 500 food
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c150b98d70acf7e4eb0ae9f44eeb7c93, type: 2}
   m_sharedMaterial: {fileID: -2717766744735201409, guid: c150b98d70acf7e4eb0ae9f44eeb7c93, type: 2}
@@ -2565,7 +2565,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -27.946655, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2605,7 +2605,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -88}
+  m_AnchoredPosition: {x: 2, y: -88}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6811843782964116189
@@ -2636,7 +2636,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pack 2
+  m_text: 1000 food
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c150b98d70acf7e4eb0ae9f44eeb7c93, type: 2}
   m_sharedMaterial: {fileID: -2717766744735201409, guid: c150b98d70acf7e4eb0ae9f44eeb7c93, type: 2}
@@ -2663,8 +2663,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 48
+  m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2701,7 +2701,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -14.904785, y: -3.7262573, z: -24.220459, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5587,7 +5587,9 @@ MonoBehaviour:
   btnPack4: {fileID: 4651490590135341347}
   PricePack4: 8000
   FoodPack4: 2000
-  algueGroup: {fileID: 0}
+  algue1: {fileID: 0}
+  algue2: {fileID: 0}
+  algue3: {fileID: 0}
 --- !u!1 &3473767505094814595
 GameObject:
   m_ObjectHideFlags: 0
@@ -7460,6 +7462,13 @@ MonoBehaviour:
     sprite: {fileID: -3933368182094344625, guid: b723d86e47c20ae419a3c0b259fe5538, type: 3}
   - type: 123
     sprite: {fileID: -484400806558541540, guid: 73d073c3e0f1f2b47a5a06fc18081d23, type: 3}
+  Type1: {fileID: 0}
+  Type2: {fileID: 0}
+  Type3: {fileID: 0}
+  Type12: {fileID: 0}
+  Type13: {fileID: 0}
+  Type23: {fileID: 0}
+  Type123: {fileID: 0}
 --- !u!1 &4341730128338730769
 GameObject:
   m_ObjectHideFlags: 0
@@ -14804,7 +14813,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pack 3
+  m_text: 1500 food
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c150b98d70acf7e4eb0ae9f44eeb7c93, type: 2}
   m_sharedMaterial: {fileID: -2717766744735201409, guid: c150b98d70acf7e4eb0ae9f44eeb7c93, type: 2}
@@ -14831,8 +14840,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 48
+  m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -14869,7 +14878,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -13.041626, y: 0, z: -22.357178, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -16012,6 +16021,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4516988530011440557}
     m_Modifications:
+    - target: {fileID: 2970185808328651452, guid: 8242b338b6694a54b949d306266e877e, type: 3}
+      propertyPath: m_text
+      value: Shipwreck
+      objectReference: {fileID: 0}
     - target: {fileID: 5847832653298483888, guid: 8242b338b6694a54b949d306266e877e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -16104,9 +16117,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2231461725370345879}
+    - target: {fileID: 6239958262395362557, guid: 8242b338b6694a54b949d306266e877e, type: 3}
+      propertyPath: m_text
+      value: Lagoon
+      objectReference: {fileID: 0}
     - target: {fileID: 7728780729793786914, guid: 8242b338b6694a54b949d306266e877e, type: 3}
       propertyPath: m_Name
       value: OverlayBiome
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728780729793786914, guid: 8242b338b6694a54b949d306266e877e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

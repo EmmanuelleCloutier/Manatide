@@ -13377,7 +13377,7 @@ PrefabInstance:
     - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
       propertyPath: Type3
       value: 
-      objectReference: {fileID: -7687219920802530846, guid: 788f47580a2c27c4fa8d38c8275ce795, type: 3}
+      objectReference: {fileID: 7120316128860083704, guid: 3cd691c4ba6553c4e9c46cd1d5c632c4, type: 3}
     - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
       propertyPath: Type12
       value: 
@@ -13385,7 +13385,7 @@ PrefabInstance:
     - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
       propertyPath: Type13
       value: 
-      objectReference: {fileID: -7624796473339272443, guid: 2ad0c0218984fab4c943b1ad95bc63ff, type: 3}
+      objectReference: {fileID: -8599379576931795529, guid: 3cb8b51d084587a4e8729c6477042254, type: 3}
     - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
       propertyPath: Type23
       value: 
@@ -13413,7 +13413,7 @@ PrefabInstance:
     - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
       propertyPath: spriteByTypeList.Array.data[2].sprite
       value: 
-      objectReference: {fileID: -7687219920802530846, guid: 788f47580a2c27c4fa8d38c8275ce795, type: 3}
+      objectReference: {fileID: 7120316128860083704, guid: 3cd691c4ba6553c4e9c46cd1d5c632c4, type: 3}
     - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
       propertyPath: spriteByTypeList.Array.data[3].sprite
       value: 
@@ -13421,7 +13421,7 @@ PrefabInstance:
     - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
       propertyPath: spriteByTypeList.Array.data[4].sprite
       value: 
-      objectReference: {fileID: -7624796473339272443, guid: 2ad0c0218984fab4c943b1ad95bc63ff, type: 3}
+      objectReference: {fileID: -8599379576931795529, guid: 3cb8b51d084587a4e8729c6477042254, type: 3}
     - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
       propertyPath: spriteByTypeList.Array.data[5].sprite
       value: 

@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 225f8dff5e01a614399459b7e9a86730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinValue: 2
+  coinValue: 150
   playerState: {fileID: 11400000, guid: 1539bc16371822340868bc95d668a50e, type: 2}
 --- !u!58 &3171863066060390813
 CircleCollider2D:

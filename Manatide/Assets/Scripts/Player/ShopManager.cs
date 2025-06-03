@@ -185,11 +185,11 @@ public class ShopManager : MonoBehaviour
         switch (lvl)
         {
             case 1:
-                return "Biome : Langune";
+                return "Crystalline Lagoon";
             case 2:
-				return "Biome : Kelp";
+				return "Kelp Forest";
             case 3:
-                return "Biome : Épave";
+                return "Sunken Shipwreck";
             default:
                 return "Pas suppose";
         }

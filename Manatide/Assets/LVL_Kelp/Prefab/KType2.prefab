@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 5777675318904165673, guid: fbbd973f54c967747bc08fa3ca156b01, type: 3}
+  m_Sprite: {fileID: -6717311582952404858, guid: 4f6add470183438479ef300958160d1a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roamRadius: 5
   roamDelay: 3
-  moveSpeed: 0.25
+  moveSpeed: 1
   coinPrefab: {fileID: 6252752130863341971, guid: 962334f8ce0b64f438ec1c8f30fa7517, type: 3}
   minCoinSpawnTime: 15
   maxCoinSpawnTime: 30

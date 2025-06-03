@@ -103,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roamRadius: 5
   roamDelay: 3
-  moveSpeed: 1
+  moveSpeed: 0.5
   coinPrefab: {fileID: 6252752130863341971, guid: 962334f8ce0b64f438ec1c8f30fa7517, type: 3}
   minCoinSpawnTime: 5
   maxCoinSpawnTime: 15
