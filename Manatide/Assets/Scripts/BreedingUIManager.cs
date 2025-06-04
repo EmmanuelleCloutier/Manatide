@@ -144,7 +144,8 @@ public void OnBreedButtonClicked()
             type = newType,
             biome = (Biome)manateeManager.playerState.lvl
         };
-
+        
+        manateeManager.AddManatee(newManatee);
         GameObject prefabToSpawn = null;
 
         switch ((int)newType)
