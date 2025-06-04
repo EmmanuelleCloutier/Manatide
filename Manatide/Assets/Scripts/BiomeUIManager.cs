@@ -29,6 +29,12 @@ public class BiomeUIManager : MonoBehaviour
         playerState.lvl = 1;
         SaveAndLoadBiome("LVL_MainMenu");
     }
+    
+    public void GoToInformation()
+    {
+        playerState.lvl = 1;
+        SaveAndLoadBiome("LVL_Information");
+    }
 
     public void GoToLangune()
     {
