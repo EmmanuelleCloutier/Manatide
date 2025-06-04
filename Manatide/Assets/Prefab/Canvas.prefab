@@ -5546,6 +5546,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerState: {fileID: 11400000, guid: 1539bc16371822340868bc95d668a50e, type: 2}
+  startingCoins: 400
+  startingFood: 500
   coinsText: {fileID: 2126020167779192935}
   foodText: {fileID: 1767806819567023259}
   spawnPoint: {fileID: 0}
@@ -6526,7 +6528,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: Result
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c150b98d70acf7e4eb0ae9f44eeb7c93, type: 2}
   m_sharedMaterial: {fileID: -2717766744735201409, guid: c150b98d70acf7e4eb0ae9f44eeb7c93, type: 2}

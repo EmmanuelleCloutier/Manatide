@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2763315692577036273}
   - component: {fileID: 4633487490775197053}
   - component: {fileID: -5914914351252686209}
+  - component: {fileID: 697960199432145280}
   m_Layer: 0
   m_Name: LType13
   m_TagString: Untagged
@@ -103,7 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roamRadius: 5
   roamDelay: 3
-  moveSpeed: 0.5
+  moveSpeed: 0.25
   coinPrefab: {fileID: 6252752130863341971, guid: 962334f8ce0b64f438ec1c8f30fa7517, type: 3}
   minCoinSpawnTime: 45
   maxCoinSpawnTime: 60
@@ -149,3 +150,25 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.16
+--- !u!95 &697960199432145280
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7547074259041090538}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7266fe1f7ed8e604abfa9ce8e9a8eed8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

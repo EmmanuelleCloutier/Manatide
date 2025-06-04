@@ -11,6 +11,10 @@ public class ShopManager : MonoBehaviour
 	public PlayerState playerState;
 	NameGenerator nameGenerator;
 
+	[Header("Ressources de départ")]
+	public int startingCoins = 400;
+	public int startingFood = 500;
+
 
 	[Header("Ressources")]
 	public TextMeshProUGUI coinsText;
@@ -152,8 +156,9 @@ public class ShopManager : MonoBehaviour
 		PlayerPrefs.Save();
 
 		// remettre les ressources de base
-		playerState.AddCoins(15000);
-		playerState.AddFood(15000);
+		playerState.AddCoins(startingCoins);
+		playerState.AddFood(startingFood);
+
 
 		// Sauvegarder immédiatement pour recréer les fichiers
 		SaveGame();
@@ -323,9 +328,9 @@ public void BuyManateeType1()
         }
 
         StartCoroutine(DelayedRefreshUI());
-        UpdateCoinsUI();
-
         playerState.coins -= PriceM1;
+		UpdateCoinsUI();
+
     }
 }
 
@@ -357,9 +362,8 @@ public void BuyManateeType2()
         }
 
        StartCoroutine(DelayedRefreshUI());
-        UpdateCoinsUI();
-
         playerState.coins -= PriceM2;
+		UpdateCoinsUI();
     }
 }
 
@@ -391,9 +395,8 @@ public void BuyManateeType3()
         }
 
        StartCoroutine(DelayedRefreshUI());
-        UpdateCoinsUI();
-
         playerState.coins -= PriceM3;
+		UpdateCoinsUI();
     }
 }
 

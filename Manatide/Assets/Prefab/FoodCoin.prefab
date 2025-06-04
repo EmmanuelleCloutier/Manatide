@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad9e65f0aac994149a311cd6d7e3c871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodValue: 300
+  foodValue: 150
   playerState: {fileID: 11400000, guid: 1539bc16371822340868bc95d668a50e, type: 2}
 --- !u!58 &8245365671961187499
 CircleCollider2D:

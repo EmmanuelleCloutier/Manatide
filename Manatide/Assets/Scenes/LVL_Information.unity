@@ -980,7 +980,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -431, y: 318}
+  m_AnchoredPosition: {x: -431, y: 350}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1327719708
@@ -1003,11 +1003,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "1. Buy a Manatee from the store\n\n2. Feed the manatee to lvl him up\n(You
-    can buy food pack or the alguee that produce food to feed the manatee)\n\n3.
-    Breed 2 manatees that are lvl 5\n \n4. Repeat and have a manatee family on each
-    biome!\n(You can see all the manatees that you own in the I button)\n\n5. Dont
-    forget to save the game by clicking the S button (top left)"
+  m_text: "1. Buy a Manatee from the store\n(They will make coins)\n\n2. Feed the
+    manatee to lvl him up\n(You can buy food pack or the alguee that produce food
+    to feed the manatee)\n\n3. Breed 2 manatees that are lvl 5\n \n4. Repeat and
+    have a manatee family on each biome!\n(You can see all the manatees that you
+    own in the I button)\n\n5. Dont forget to save the game by clicking the S button
+    (top left)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c150b98d70acf7e4eb0ae9f44eeb7c93, type: 2}
   m_sharedMaterial: {fileID: -2717766744735201409, guid: c150b98d70acf7e4eb0ae9f44eeb7c93, type: 2}
