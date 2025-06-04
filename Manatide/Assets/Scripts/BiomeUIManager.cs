@@ -8,10 +8,14 @@ public class BiomeUIManager : MonoBehaviour
     public Button Langune;
     public Button Kelp;
     public Button Epave;
+    
+    
 
     [Header("Ressources")] 
     public ShopManager shopManager;
     public PlayerState playerState;
+    
+    
 
     void Start()
     {
@@ -20,7 +24,13 @@ public class BiomeUIManager : MonoBehaviour
         Epave.onClick.AddListener(GoToEpave);
     }
 
-    void GoToLangune()
+    public void GoToMainMenu()
+    {
+        playerState.lvl = 1;
+        SaveAndLoadBiome("LVL_MainMenu");
+    }
+
+    public void GoToLangune()
     {
         playerState.lvl = 1; // Langune
         SaveAndLoadBiome("LVL_Langune");
