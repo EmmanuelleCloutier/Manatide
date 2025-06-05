@@ -5554,11 +5554,11 @@ MonoBehaviour:
   BiomeText: {fileID: 3376083624177766400}
   manateeManager: {fileID: 0}
   btnKelpShop: {fileID: 5492355153890589440}
-  PriceBKelp: 5000
+  PriceBKelp: 500
   KelpText: {fileID: 1696920889765630833}
   btnKelpBiome: {fileID: 7382926128314869423}
   btnEpave: {fileID: 5882650276523364335}
-  PriceBEpave: 10000
+  PriceBEpave: 1000
   EpaveText: {fileID: 4512952390895273684}
   btnEpaveBiome: {fileID: 8084694010279755595}
   btnManatee1: {fileID: 5135406048494554576}
