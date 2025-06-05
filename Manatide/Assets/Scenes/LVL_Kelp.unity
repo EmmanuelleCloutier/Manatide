@@ -13047,7 +13047,7 @@ PrefabInstance:
       objectReference: {fileID: -9031027573037896040, guid: f888fa16593fb1144bcfa50473a34d03, type: 3}
     - target: {fileID: 693158845156453303, guid: c98f558a9e22e8841ab631fc5fd22ec2, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3737656447028990669, guid: c98f558a9e22e8841ab631fc5fd22ec2, type: 3}
       propertyPath: m_Sprite
@@ -13055,7 +13055,7 @@ PrefabInstance:
       objectReference: {fileID: -9031027573037896040, guid: f888fa16593fb1144bcfa50473a34d03, type: 3}
     - target: {fileID: 3737656447028990669, guid: c98f558a9e22e8841ab631fc5fd22ec2, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4700144452937588597, guid: c98f558a9e22e8841ab631fc5fd22ec2, type: 3}
       propertyPath: m_Name
@@ -13115,7 +13115,7 @@ PrefabInstance:
       objectReference: {fileID: -9031027573037896040, guid: f888fa16593fb1144bcfa50473a34d03, type: 3}
     - target: {fileID: 7069434701898601817, guid: c98f558a9e22e8841ab631fc5fd22ec2, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8654543979595934878, guid: c98f558a9e22e8841ab631fc5fd22ec2, type: 3}
       propertyPath: m_Sprite
@@ -13123,7 +13123,7 @@ PrefabInstance:
       objectReference: {fileID: -9031027573037896040, guid: f888fa16593fb1144bcfa50473a34d03, type: 3}
     - target: {fileID: 8654543979595934878, guid: c98f558a9e22e8841ab631fc5fd22ec2, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8900556513335396959, guid: c98f558a9e22e8841ab631fc5fd22ec2, type: 3}
       propertyPath: m_Sprite
@@ -13131,7 +13131,7 @@ PrefabInstance:
       objectReference: {fileID: -9031027573037896040, guid: f888fa16593fb1144bcfa50473a34d03, type: 3}
     - target: {fileID: 8900556513335396959, guid: c98f558a9e22e8841ab631fc5fd22ec2, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

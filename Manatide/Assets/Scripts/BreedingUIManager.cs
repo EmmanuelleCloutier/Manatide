@@ -30,6 +30,7 @@ public class BreedingUIManager : MonoBehaviour
     private ItemManatee selectedRight;
     private List<ManateeBreedingCard> leftCards = new();
     private List<ManateeBreedingCard> rightCards = new();
+	private int consecutiveFails = 0;
 
     void OnEnable()
     {
@@ -128,13 +129,19 @@ public void OnBreedButtonClicked()
         breedingResultText.text = "Pas assez d'argent ! (250$ requis)";
         return;
     }
+
     manateeManager.playerState.SpendCoins(250);
 
     int chance = CalculateBreedingChance(selectedLeft.type, selectedRight.type);
-    bool success = Random.Range(0f, 1f) <= (chance / 100f);
+
+    // Force un succès si 3 échecs d'affilée
+    bool forceSuccess = consecutiveFails >= 3;
+    bool success = forceSuccess || Random.Range(0f, 1f) <= (chance / 100f);
 
     if (success)
     {
+        consecutiveFails = 0; // Réinitialise le compteur d’échecs
+
         var newType = GetNewManateeType(selectedLeft.type, selectedRight.type);
         string generatedName = nameGenerator.GenerateName();
         ItemManatee newManatee = new ItemManatee
@@ -144,27 +151,17 @@ public void OnBreedButtonClicked()
             type = newType,
             biome = (Biome)manateeManager.playerState.lvl
         };
-        
+
         manateeManager.AddManatee(newManatee);
         GameObject prefabToSpawn = null;
 
         switch ((int)newType)
         {
-            case 12:
-                prefabToSpawn = prefabManateeType12;
-                break;
-            case 13:
-                prefabToSpawn = prefabManateeType13;
-                break;
-            case 23:
-                prefabToSpawn = prefabManateeType23;
-                break;
-            case 123:
-                prefabToSpawn = prefabManateeType123;
-                break;
-            default:
-                Debug.LogWarning("Type de manatee inconnu : " + newType);
-                break;
+            case 12: prefabToSpawn = prefabManateeType12; break;
+            case 13: prefabToSpawn = prefabManateeType13; break;
+            case 23: prefabToSpawn = prefabManateeType23; break;
+            case 123: prefabToSpawn = prefabManateeType123; break;
+            default: Debug.LogWarning("Type de manatee inconnu : " + newType); break;
         }
 
         if (prefabToSpawn != null)
@@ -181,16 +178,17 @@ public void OnBreedButtonClicked()
         }
 
         StartCoroutine(DelayedBreedingUIRefresh());
-
         breedingResultText.text = "Success !";
     }
     else
     {
+        consecutiveFails++; // Incrémente le compteur d’échecs
         breedingResultText.text = "Fail Try again !";
     }
 
     RefreshBreedingUI();
 }
+
 
 
     int CalculateBreedingChance(ManateeType left, ManateeType right)
