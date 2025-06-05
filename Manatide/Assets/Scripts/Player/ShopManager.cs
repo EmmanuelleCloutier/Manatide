@@ -218,7 +218,8 @@ public class ShopManager : MonoBehaviour
 		//biome kelp
 		if (!playerState.BiomeKelp)
 		{	
-			 btnKelpBiome.gameObject.SetActive(false);
+			KelpText.text = "500$";
+			btnKelpBiome.gameObject.SetActive(false);
 		}
 		else {
 			KelpText.text = "Sold";
@@ -226,14 +227,16 @@ public class ShopManager : MonoBehaviour
 		}
 
 		//biome epave
-		if (!playerState.BiomeKelp)
+		if (!playerState.BiomeEpave)
 		{	
-			 btnEpaveBiome.gameObject.SetActive(false);
+			EpaveText.text = "1000$";
+			btnEpaveBiome.gameObject.SetActive(false);
 		}
 		else {
 			EpaveText.text = "Sold";
-            btnEpaveBiome.gameObject.SetActive(true);
+			btnEpaveBiome.gameObject.SetActive(true);
 		}
+
 
 		//food 
 		UpdateFoodUI();

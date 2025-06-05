@@ -53,22 +53,47 @@ public class FoodCoinSpawner : MonoBehaviour
             sr.sortingOrder = 10; // plus grand que celui des algues
     }
 
-    Vector2 GetRandomPointInCollider(Collider2D collider)
+    Vector2 GetRandomPointInCircle(Collider2D collider)
     {
-        Bounds bounds = collider.bounds;
-        Vector2 point;
+        CircleCollider2D circle = collider as CircleCollider2D;
+        if (circle == null)
+            return collider.bounds.center; // fallback
 
-        int safety = 0;
-        do
-        {
-            point = new Vector2(
-                Random.Range(bounds.min.x, bounds.max.x),
-                Random.Range(bounds.min.y, bounds.max.y)
-            );
-            safety++;
-            if (safety > 30) break;
-        } while (!collider.OverlapPoint(point));
+        Vector2 center = circle.bounds.center;
+        float radius = circle.radius * circle.transform.lossyScale.x; // prendre en compte l'échelle globale
+
+        float angle = Random.Range(0f, Mathf.PI * 2f);
+        float dist = Mathf.Sqrt(Random.Range(0f, 1f)) * radius;
+
+        Vector2 point = center + new Vector2(
+            Mathf.Cos(angle) * dist,
+            Mathf.Sin(angle) * dist
+        );
 
         return point;
     }
+
+    Vector2 GetRandomPointInCollider(Collider2D collider)
+    {
+        if (collider is CircleCollider2D)
+            return GetRandomPointInCircle(collider);
+        else
+        {
+            Bounds bounds = collider.bounds;
+            Vector2 point;
+            int safety = 0;
+            do
+            {
+                point = new Vector2(
+                    Random.Range(bounds.min.x, bounds.max.x),
+                    Random.Range(bounds.min.y, bounds.max.y)
+                );
+                safety++;
+                if (safety > 30) break;
+            } while (!collider.OverlapPoint(point));
+
+            return point;
+        }
+    }
+
 }
