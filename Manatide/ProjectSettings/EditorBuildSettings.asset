@@ -20,6 +20,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LVL_Epave.unity
     guid: 25ae42222cb238a42845bc181b8a5a09
+  - enabled: 1
+    path: Assets/Scenes/LVL_Settings.unity
+    guid: ad2ebe159ce44bc4a8cdf3c4780aa90a
+  - enabled: 1
+    path: Assets/Scenes/LVL_Credits.unity
+    guid: 68d606cd515e1d24ab1b9aa570c94cf8
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
