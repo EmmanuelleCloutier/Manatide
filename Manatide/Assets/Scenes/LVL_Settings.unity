@@ -155,7 +155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 747, y: 80}
+  m_AnchoredPosition: {x: 678, y: 0}
   m_SizeDelta: {x: 193.1182, y: 56.1285}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &79141688
@@ -343,7 +343,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -492, y: 196}
+  m_AnchoredPosition: {x: -492, y: 144}
   m_SizeDelta: {x: 805.455, y: 102.94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &180731839
@@ -431,8 +431,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 272, y: 507}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -542.68, y: 422}
+  m_SizeDelta: {x: 704.09, y: 189.986}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &218205899
 MonoBehaviour:
@@ -521,7 +521,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -812.8556, y: 0, z: -416.8224, w: -122.95178}
+  m_margin: {x: -0.6287842, y: 0, z: 1.5974121, w: -4.502014}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1073,6 +1073,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+--- !u!114 &1175423984 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5837780782104802077, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+  m_PrefabInstance: {fileID: 1175423983}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e717e97d6c33614e97bede9cee86e70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1175423986 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3391307964542680011, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
@@ -1120,7 +1131,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -705, y: -72}
+  m_AnchoredPosition: {x: -702, y: 0}
   m_SizeDelta: {x: 193.1182, y: 56.1285}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1285283381
@@ -1181,9 +1192,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1175423986}
-        m_TargetAssemblyTypeName: BiomeUIManager, Assembly-CSharp
-        m_MethodName: GoToLangune
+      - m_Target: {fileID: 1175423984}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: ResetGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1352,8 +1363,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -612, y: 313}
-  m_SizeDelta: {x: 585.087, y: 50}
+  m_AnchoredPosition: {x: -602.18, y: 263}
+  m_SizeDelta: {x: 585.087, y: 82.6754}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1327719708
 MonoBehaviour:
@@ -1440,7 +1451,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 5.287079, y: 0, z: 6.022705, w: -50.00952}
+  m_margin: {x: 5.287079, y: 0, z: 6.022705, w: -0.9963379}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
