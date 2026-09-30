@@ -20,7 +20,6 @@ public class ShopManager : MonoBehaviour
 	public TextMeshProUGUI coinsText;
 	public TextMeshProUGUI foodText;
 	public Transform spawnPoint;
-	public TextMeshProUGUI BiomeText;
 	public ManateeManager manateeManager;
 
 
@@ -181,8 +180,8 @@ public class ShopManager : MonoBehaviour
 //Update les informations ---------------------------------------------------
 	 public void UpdateBiomeUI()
     {
-        string biome = GetBiomeName(playerState.lvl);
-        BiomeText.text = biome;
+       /* string biome = GetBiomeName(playerState.lvl);
+        BiomeText.text = biome;*/
     }
 
     string GetBiomeName(int lvl)
@@ -203,12 +202,12 @@ public class ShopManager : MonoBehaviour
 
 	public void UpdateCoinsUI()
 	{
-    	coinsText.text = playerState.coins.ToString() + " coins";
+    	coinsText.text = playerState.coins.ToString();
 	}
 
 	public void UpdateFoodUI()
 	{
-		foodText.text = playerState.food.ToString() + " food";
+		foodText.text = playerState.food.ToString();
 	}
 
 //Biome -----------------------------------
