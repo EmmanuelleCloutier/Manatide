@@ -23,8 +23,8 @@ public class AIManatee : MonoBehaviour
     
     void OnMouseDown()
     {
-        GameUIManager.Instance.ShowOverlayManateeUI();
-        ManateeSingleUI.Instance.Display(data, sprite);
+        /*GameUIManager.Instance.ShowOverlayManateeUI();
+        ManateeSingleUI.Instance.Display(data, sprite);*/
     }
 
     void Start()
