@@ -860,6 +860,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f27a285e5ed7d14fb1980c25871e7d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1903858720 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5708213936518056720, guid: aac2bacc1bbd4284782705f03403e900, type: 3}
+  m_PrefabInstance: {fileID: 1738232218557871832}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ea703d64925c7c4b98665978b9d5d2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1951512528
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -868,6 +879,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3626696820554831002, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 838515381}
+    - target: {fileID: 3626696820554831002, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: nameGenerator
+      value: 
+      objectReference: {fileID: 1903858720}
+    - target: {fileID: 3626696820554831002, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: manateeManager
+      value: 
+      objectReference: {fileID: 3238154658792052242}
+    - target: {fileID: 3626696820554831002, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: prefabManateeType12
+      value: 
+      objectReference: {fileID: 9083392849169492859, guid: 51c47dc09b9825c4cb6c0f86ab9688c9, type: 3}
+    - target: {fileID: 3626696820554831002, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: prefabManateeType13
+      value: 
+      objectReference: {fileID: 7547074259041090538, guid: e89f879601eb1e1489b42d1d479fbf98, type: 3}
+    - target: {fileID: 3626696820554831002, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: prefabManateeType23
+      value: 
+      objectReference: {fileID: 463901068361450839, guid: 16390d7be1586d049943db55004ebaa7, type: 3}
+    - target: {fileID: 3626696820554831002, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: prefabManateeType123
+      value: 
+      objectReference: {fileID: 3396228640903903102, guid: f1f58474c9a505f4d94ae34cec35aeef, type: 3}
+    - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: manateeManager
+      value: 
+      objectReference: {fileID: 3238154658792052242}
     - target: {fileID: 4516988530011440557, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
       propertyPath: m_Pivot.x
       value: 0
