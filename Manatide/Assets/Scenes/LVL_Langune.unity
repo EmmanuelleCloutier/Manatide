@@ -1011,12 +1011,17 @@ PrefabInstance:
       propertyPath: manateeManager
       value: 
       objectReference: {fileID: 3238154658792052242}
+    - target: {fileID: 7176689671784506563, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7435674790116932394, guid: ece1f710bbf277048b00850291644583, type: 3}
     - target: {fileID: 7342516189232830359, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 732050067938628770, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4516988530011440557, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
       insertIndex: 0
