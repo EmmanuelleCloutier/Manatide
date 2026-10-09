@@ -120,7 +120,7 @@ public class ShopManager : MonoBehaviour
 			UpdateFoodUI();
 			UpdateBiomeUI();
 			VerifBiome();
-			UpdateFoodAlgueUI();
+			//UpdateFoodAlgueUI();
 
 			UpdatePlantesVisibility();
 
@@ -407,12 +407,12 @@ public void BuyManateeType3()
 
 	public void UpdateFoodAlgueUI()
 	{
-		LimitText.text = NbPressed + "/3";
+		//LimitText.text = NbPressed + "/3";
 	}
 
   public void UpdatePlantesVisibility()
 {
-	NbPressed = 0;
+	/*NbPressed = 0;
 	algue1.SetActive(false);
 	algue2.SetActive(false);
 	algue3.SetActive(false);
@@ -444,7 +444,7 @@ public void BuyManateeType3()
 		FoodText.gameObject.SetActive(true);
 		PriceText.gameObject.SetActive(false);
 		LimitText.gameObject.SetActive(false);
-	}
+	}*/
 }
 
     
