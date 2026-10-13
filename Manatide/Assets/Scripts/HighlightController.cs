@@ -13,7 +13,20 @@ public class HighlightController : MonoBehaviour, IPointerEnterHandler, IPointer
     private void Awake()
     {
         buttonImage = GetComponent<Image>();
+    }
+
+    private void OnEnable()
+    {
+        if (buttonImage == null)
+            buttonImage = GetComponent<Image>();
+
         buttonImage.sprite = normalSprite;
+    }
+
+    private void OnDisable()
+    {
+        if (buttonImage != null)
+            buttonImage.sprite = normalSprite;
     }
 
     public void OnPointerEnter(PointerEventData eventData)

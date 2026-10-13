@@ -87,10 +87,9 @@ public class GameUIManager : MonoBehaviour
 	}
 
 	public void OverlayBreedingCenter()
-	{
-		BtnBreeding.gameObject.SetActive(false);
-		overlayBreeding.SetActive(true);
-	}
+{
+    overlayBreeding.SetActive(true);
+}
 
     public void MuteAudio()
     {
