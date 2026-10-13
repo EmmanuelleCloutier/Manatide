@@ -4066,7 +4066,7 @@ MonoBehaviour:
   levelText: {fileID: 2758436874622337273}
   spriteImage: {fileID: 2034975267247858610}
   feedButton: {fileID: 6481613907558840239}
-  feedButtonText: {fileID: 0}
+  feedButtonText: {fileID: 7784036517193898460}
   deleteButton: {fileID: 8390652908761936966}
   playerState: {fileID: 11400000, guid: 1539bc16371822340868bc95d668a50e, type: 2}
   manateeManager: {fileID: 0}
@@ -4105,9 +4105,9 @@ RectTransform:
   m_Father: {fileID: 8854836044911969102}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -17, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &3630489985712539408
 CanvasRenderer:
@@ -5266,7 +5266,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7720226036726942381
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5366,6 +5366,7 @@ MonoBehaviour:
   Type13: {fileID: 0}
   Type23: {fileID: 0}
   Type123: {fileID: 0}
+  overlayManateeUI: {fileID: 3017442552536961856}
 --- !u!1 &4341730128338730769
 GameObject:
   m_ObjectHideFlags: 0
@@ -6228,10 +6229,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 4703764170443146680}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 100, y: -100}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5378858908097468608
 CanvasRenderer:
@@ -6747,7 +6748,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1007802523995206272}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5455104616869670534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7009,7 +7022,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0.000030220579}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -9.206177, y: 200}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &870348159713136462
 MonoBehaviour:
@@ -9259,7 +9272,7 @@ RectTransform:
   m_Father: {fileID: 3659828408487628732}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
