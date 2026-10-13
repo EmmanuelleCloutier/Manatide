@@ -1,3 +1,4 @@
+
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -18,7 +19,6 @@ public class ManateeSingleUI : MonoBehaviour
     public PlayerState playerState;
     public ManateeManager manateeManager;
 
-    
     private ItemManatee currentManatee;
     private const int MaxLevel = 10;
     private const int FeedCost = 150;
@@ -27,7 +27,6 @@ public class ManateeSingleUI : MonoBehaviour
     {
         Instance = this;
     }
-    
 
     public void Display(ItemManatee manatee, Sprite sprite)
     {
@@ -45,17 +44,20 @@ public class ManateeSingleUI : MonoBehaviour
     public void OnFeedButtonClicked()
     {
         if (currentManatee == null) return;
-        
+
         if (currentManatee.lvl >= MaxLevel) return;
-        
-        if (playerState.food < FeedCost)  return;
-        
+
+        if (playerState.food < FeedCost) return;
+
         playerState.SpendFood(FeedCost);
         currentManatee.lvl += 1;
 
+        // NEW - Save Manatee level after feeding
+        manateeManager.SaveManatees();
+
         UpdateLevelUI();
     }
-    
+
     public void OnDeleteButtonClicked()
     {
         if (currentManatee == null) return;
@@ -66,8 +68,11 @@ public class ManateeSingleUI : MonoBehaviour
         //Debug.Log($"Manatee supprimé. Gagné {reward} coins !");
         manateeManager.DeleteManatee(currentManatee);
     }
+
     private void UpdateLevelUI()
     {
+        if (currentManatee == null) return;
+
         levelText.text = currentManatee.lvl.ToString();
 
         if (currentManatee.lvl >= MaxLevel)

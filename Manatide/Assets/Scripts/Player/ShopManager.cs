@@ -94,6 +94,11 @@ public class ShopManager : MonoBehaviour
 		//Biomes
 		VerifBiome();
 	}
+
+private void Awake()
+{
+    Instance = this;
+}
 	
 //Saving or resetting the game
 	public void SaveGame()
@@ -114,6 +119,7 @@ public class ShopManager : MonoBehaviour
 			playerState.BiomeKelp = data.biomeKelp;
 			playerState.BiomeEpave = data.biomeEpave;
 			NbPressed = data.nbPressed;
+ Debug.Log("Coins chargés depuis save.dat : " + data.coins);
 
 			// Rafraîchir les UI et l'état visuel
 			UpdateCoinsUI();

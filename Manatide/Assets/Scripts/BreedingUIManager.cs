@@ -131,8 +131,17 @@ public void OnBreedButtonClicked()
     }
 
     manateeManager.playerState.SpendCoins(250);
+if (ShopManager.Instance != null)
+{
+    ShopManager.Instance.SaveGame();
+    Debug.Log("Breeding coins saved!");
+}
+else
+{
+    Debug.LogError("ShopManager.Instance is NULL!");
+}
 
-    int chance = CalculateBreedingChance(selectedLeft.type, selectedRight.type);
+int chance = CalculateBreedingChance(selectedLeft.type, selectedRight.type);
 
     // Force un succès si 3 échecs d'affilée
     bool forceSuccess = consecutiveFails >= 3;

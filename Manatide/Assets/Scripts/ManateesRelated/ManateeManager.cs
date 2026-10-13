@@ -36,6 +36,35 @@ public class ManateeManager : MonoBehaviour
     	}
 	}
 
+
+public void UpdateManateeLevel(ItemManatee manatee, int newLevel)
+{
+    if (manatee == null)
+        return;
+
+    if (!ownedManatees.Contains(manatee))
+    {
+        Debug.LogWarning("Manatee not found in ownedManatees!");
+        return;
+    }
+
+    // Update the manatee level
+    manatee.lvl = newLevel;
+
+    // Save updated data
+    SaveManatees();
+
+    // Refresh UI
+    if (manateeInfoUI != null && manateeInfoUI.isActiveAndEnabled)
+    {
+        manateeInfoUI.RefreshUI();
+    }
+
+    Debug.Log("Manatee " + manatee.itemName +
+              " saved at level " + manatee.lvl);
+}
+
+
 	public void DeleteAllManatees()
 	{
     	foreach (GameObject manatee in spawnedManatees)
