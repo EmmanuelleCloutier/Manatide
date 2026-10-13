@@ -649,6 +649,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 767732936351498255, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6717311582952404858, guid: 4f6add470183438479ef300958160d1a, type: 3}
+    - target: {fileID: 2218927245728660577, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7687219920802530846, guid: 3bedd3c5adae4dd45b41ae414eb7a0f5, type: 3}
     - target: {fileID: 3626696820554831002, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
       propertyPath: spawnPoint
       value: 
@@ -709,6 +717,34 @@ PrefabInstance:
       propertyPath: manateeManager
       value: 
       objectReference: {fileID: 3238154658792052242}
+    - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: spriteByTypeList.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 5235321499061723878, guid: 1b20a4cc1e6cfe649b30142dc9d277ef, type: 3}
+    - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: spriteByTypeList.Array.data[1].sprite
+      value: 
+      objectReference: {fileID: -6717311582952404858, guid: 4f6add470183438479ef300958160d1a, type: 3}
+    - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: spriteByTypeList.Array.data[2].sprite
+      value: 
+      objectReference: {fileID: -7687219920802530846, guid: 3bedd3c5adae4dd45b41ae414eb7a0f5, type: 3}
+    - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: spriteByTypeList.Array.data[3].sprite
+      value: 
+      objectReference: {fileID: -7268884167062935640, guid: b77047b7c9f0f534a9a51389cb9bc0da, type: 3}
+    - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: spriteByTypeList.Array.data[4].sprite
+      value: 
+      objectReference: {fileID: -7624796473339272443, guid: 6cab7f234d3ee0a4baa5953d2176a079, type: 3}
+    - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: spriteByTypeList.Array.data[5].sprite
+      value: 
+      objectReference: {fileID: -3933368182094344625, guid: 980826ba3961e0d40a228da9da5ca4da, type: 3}
+    - target: {fileID: 3811924940683691552, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: spriteByTypeList.Array.data[6].sprite
+      value: 
+      objectReference: {fileID: -484400806558541540, guid: 4786e11f73afb864a85dbca0e4d4797a, type: 3}
     - target: {fileID: 4516988530011440557, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -797,10 +833,26 @@ PrefabInstance:
       propertyPath: manateeManager
       value: 
       objectReference: {fileID: 3238154658792052242}
+    - target: {fileID: 5837780782104802077, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: prefabManateeType1
+      value: 
+      objectReference: {fileID: 6991527556628755838, guid: 216bbf5344cd9f44fb45a17e377526bc, type: 3}
+    - target: {fileID: 5837780782104802077, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: prefabManateeType2
+      value: 
+      objectReference: {fileID: 4769219138305956075, guid: 17f3203bf8e366d4d977fd4a6184f196, type: 3}
+    - target: {fileID: 5837780782104802077, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: prefabManateeType3
+      value: 
+      objectReference: {fileID: 7268472527052547354, guid: 252b4393641323e42afb50b6b0eed1f8, type: 3}
     - target: {fileID: 5845935889032750562, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
       propertyPath: manateeManager
       value: 
       objectReference: {fileID: 3238154658792052242}
+    - target: {fileID: 6636626524662439197, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5235321499061723878, guid: 1b20a4cc1e6cfe649b30142dc9d277ef, type: 3}
     - target: {fileID: 7342516189232830359, guid: 63ee8440ffc71824dbe057c832e2c130, type: 3}
       propertyPath: m_Name
       value: Canvas
